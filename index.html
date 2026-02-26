@@ -523,7 +523,7 @@
 </section>
 
 <!-- 10 ЗОЛОТЫХ ПРАВИЛ -->
-<section class="section rules-section">
+<section id="parallax-section" class="section rules-section" style="background: linear-gradient(rgba(254,252,245,0.9), rgba(254,252,245,0.9)), url('images/rules-bg.jpg'); background-size: cover; background-attachment: fixed;">
     <div class="container">
         <h2>🥗 10 золотых правил питания</h2>
         <div class="rules-grid">
@@ -726,8 +726,114 @@
     <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.97 9.273c-.146.658-.537.818-1.089.509l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.96-.99c-.643-.202-.655-.643.135-.953l11.56-4.456c.538-.196 1.01.129.832.941z"/>
   </svg>
 </a>
+<style>
+  /* Плавное появление карточек */
+  .service-card, .problem-card, .telegram-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .service-card:hover, .problem-card:hover, .telegram-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px -10px rgba(45, 106, 79, 0.3);
+  }
+
+  /* Красивое подчёркивание ссылок в меню (как в дорогих сайтах) [citation:2] */
+  .menu-container a {
+    position: relative;
+  }
+  .menu-container a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  .menu-container a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  /* Плавное появление блоков при загрузке */
+  .hero, .section {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+  }
+  .hero { animation-delay: 0.1s; }
+  .section:nth-of-type(1) { animation-delay: 0.2s; }
+  .section:nth-of-type(2) { animation-delay: 0.3s; }
+  /* и так далее */
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style> 
+ html {
+  scroll-behavior: smooth;
+}   
+<script>
+  // Простой scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.section:not(.hero)').forEach(section => {
+    section.classList.add('fade-section');
+    observer.observe(section);
+  });
+</script>
+
+<style>
+  .fade-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>    
+ <script>
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallax = document.getElementById('parallax-section');
+    if (parallax) {
+      parallax.style.backgroundPositionY = -(scrolled * 0.1) + 'px';
+    }
+  });
+</script>
+.hero [style*="display: flex; align-items: center; gap: 6px;"] {
+  animation: slideIn 0.3s ease forwards;
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.hero [style*="display: flex; align-items: center; gap: 6px;"]:nth-child(1) { animation-delay: 0.1s; }
+.hero [style*="display: flex; align-items: center; gap: 6px;"]:nth-child(2) { animation-delay: 0.2s; }
+/* и так далее */
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}    
 </body>
 </html>
+
 
 
 
