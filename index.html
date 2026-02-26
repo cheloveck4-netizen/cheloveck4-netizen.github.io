@@ -269,55 +269,83 @@
     background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(8px);
     z-index: 1000;
-    padding: 6px 0;
+    padding: 8px 0 4px 0;
     border-bottom: 1px solid rgba(0,0,0,0.03);
   }
-  .menu-container {
+  .menu-row {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 6px auto;
     padding: 0 12px;
     display: flex;
-    gap: 6px;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
   }
-  .menu-container::-webkit-scrollbar {
-    display: none;
-  }
-  .menu-container a {
+  .menu-row a {
     text-decoration: none;
     color: #2c3e4f;
     font-weight: 500;
-    font-size: 0.85rem;
-    padding: 5px 10px;
-    border-radius: 30px;
-    background: rgba(46, 125, 94, 0.04);
-    border: 1px solid rgba(46, 125, 94, 0.08);
+    font-size: 0.9rem;
+    padding: 6px 14px;
+    border-radius: 40px;
+    background: rgba(46, 125, 94, 0.05);
+    border: 1px solid rgba(46, 125, 94, 0.1);
     transition: 0.15s;
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    line-height: 1.2;
   }
-  .menu-container a:hover {
+  .menu-row a:hover {
     background: #2d6a4f;
     color: white;
   }
-  /* Делаем кнопку Контакты чуть заметнее */
-  .menu-container a[href="#contact"] {
-    background: rgba(46, 125, 94, 0.1);
-    border-color: rgba(46,  ., 94, 0.2);
+  .menu-column {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .menu-column a {
+    text-decoration: none;
+    color: #2c3e4f;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 6px 14px;
+    border-radius: 40px;
+    background: rgba(46, 125, 94, 0.05);
+    border: 1px solid rgba(46, 125, 94, 0.1);
+    transition: 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    width: fit-content;
+  }
+  .menu-column a:hover {
+    background: #2d6a4f;
+    color: white;
+  }
+  /* Для компьютера они будут в одной строке */
+  @media (min-width: 600px) {
+    .menu-column {
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 </style>
 
 <div class="top-menu">
-  <div class="menu-container">
+  <!-- Первые 3 кнопки в строку -->
+  <div class="menu-row">
     <a href="#about">👩 Обо мне</a>
     <a href="#services">📋 Услуги</a>
     <a href="#help">🌿 С чем помогаю</a>
+  </div>
+  
+  <!-- FAQ и Контакты под ними (на телефоне — столбик, на компе — строка) -->
+  <div class="menu-column">
     <a href="#faq">❓ FAQ</a>
     <a href="#contact">📞 Контакты</a>
   </div>
@@ -599,6 +627,7 @@
 
 </body>
 </html>
+
 
 
 
