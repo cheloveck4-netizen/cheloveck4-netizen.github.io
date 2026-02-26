@@ -327,54 +327,62 @@
 </div>
 <!-- ======= КОНЕЦ МЕНЮ ======= -->
     
-<!-- ШАПКА (новая, со всем текстом) -->
-<section class="hero" style="padding: 30px 0 40px;">
-  <div class="container hero-grid">
-    <div class="hero-content">
-      <div class="hero-badge" style="font-size: 0.9rem; margin-bottom: 10px;">
-        КЛИНИЧЕСКИЙ НУТРИЦИОЛОГ | ВРАЧ-ТЕРАПЕВТ
-      </div>
-      <h1 style="font-size: 2.5rem; margin-bottom: 15px;">Наталья <span>Чернова</span></h1>
+<!-- ШАПКА (фото всегда справа от текста) -->
+<section class="hero" style="padding: 30px 0;">
+  <div class="container">
+    <!-- Flex-контейнер: на всех экранах строка, перенос запрещён -->
+    <div style="display: flex; flex-wrap: nowrap; gap: 20px; align-items: center;">
       
-      <!-- ВАШ СИЛЬНЫЙ ТЕКСТ (сохранён) -->
-      <p class="hero-text" style="font-size: 1.1rem; margin-bottom: 15px;">
-        Вы сдавали анализы, но так и не поняли, что с ними делать?<br>
-        Устали от диет, вздутия и вечной усталости?
-      </p>
+      <!-- ТЕКСТ (слева) -->
+      <div style="flex: 1 1 60%; min-width: 0;">
+        <div class="hero-badge" style="font-size: 0.85rem; margin-bottom: 6px;">
+          КЛИНИЧЕСКИЙ НУТРИЦИОЛОГ | ВРАЧ-ТЕРАПЕВТ
+        </div>
+        <h1 style="font-size: 2rem; margin-bottom: 8px;">Наталья <span>Чернова</span></h1>
+        
+        <!-- Вовлекающий текст -->
+        <p style="font-size: 0.95rem; margin-bottom: 12px; color: var(--text-muted);">
+          Вы сдавали анализы, но так и не поняли, что с ними делать?<br>
+          Устали от диет, вздутия и вечной усталости?
+        </p>
 
-      <!-- СПИСОК С ГАЛОЧКАМИ (как вы хотели) -->
-      <div style="margin-bottom: 20px;">
-        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-          <span style="color: var(--primary); font-size: 1.2rem;">✅</span> разбираю анализы
+        <!-- Список с галочками (компактно) -->
+        <div style="margin-bottom: 12px;">
+          <div style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; margin-bottom: 4px;">
+            <span style="color: var(--primary);">✅</span> разбираю анализы
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; margin-bottom: 4px;">
+            <span style="color: var(--primary);">✅</span> нахожу дефициты
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; margin-bottom: 4px;">
+            <span style="color: var(--primary);">✅</span> налаживаю ЖКТ
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; margin-bottom: 4px;">
+            <span style="color: var(--primary);">✅</span> корректирую вес
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; margin-bottom: 4px;">
+            <span style="color: var(--primary);">✅</span> подбираю БАДы без вреда
+          </div>
         </div>
-        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-          <span style="color: var(--primary); font-size: 1.2rem;">✅</span> нахожу дефициты
-        </div>
-        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-          <span style="color: var(--primary); font-size: 1.2rem;">✅</span> налаживаю ЖКТ
-        </div>
-        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-          <span style="color: var(--primary); font-size: 1.2rem;">✅</span> корректирую вес
-        </div>
-        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-          <span style="color: var(--primary); font-size: 1.2rem;">✅</span> подбираю БАДы без вреда
+
+        <!-- Индивидуальный план -->
+        <p style="font-size: 0.95rem; margin-bottom: 16px;">
+          Индивидуальный план питания.<br>
+          С опорой на доказательную медицину.
+        </p>
+
+        <!-- КНОПКИ -->
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <a href="https://t.me/NataChYu" class="btn" style="padding: 10px 18px; font-size: 0.9rem;">Записаться</a>
+          <a href="https://t.me/Nata_nutrix" class="btn btn-outline" style="padding: 10px 18px; font-size: 0.9rem;">Telegram-канал</a>
         </div>
       </div>
-
-      <!-- ИНДИВИДУАЛЬНЫЙ ПЛАН -->
-      <p class="hero-text" style="font-size: 1.1rem; margin-bottom: 20px;">
-        Индивидуальный план питания.<br>
-        С опорой на доказательную медицину.
-      </p>
-
-      <!-- КНОПКИ -->
-      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-        <a href="https://t.me/NataChYu" class="btn">Записаться</a>
-        <a href="https://t.me/Nata_nutrix" class="btn btn-outline">Мой Telegram-канал</a>
+      
+      <!-- ФОТО (справа, фиксированная ширина, не переносится) -->
+      <div style="flex: 0 0 120px; min-width: 100px; text-align: right;">
+        <img src="images/hero.jpg" alt="Наталья Чернова" 
+             style="width: 100%; max-width: 120px; border-radius: 20px; box-shadow: var(--shadow); border: 3px solid white;">
       </div>
-    </div>
-    <div class="hero-image">
-      <img src="images/hero.jpg" alt="Наталья Чернова">
     </div>
   </div>
 </section>
@@ -672,6 +680,7 @@
 </a>
 </body>
 </html>
+
 
 
 
