@@ -327,59 +327,57 @@
 </div>
 <!-- ======= КОНЕЦ МЕНЮ ======= -->
     
-<!-- ШАПКА: фото всегда справа, даже на телефоне -->
+<!-- ШАПКА: фото справа, на телефоне 180px, на компе 320px -->
 <section class="hero" style="padding: 30px 0;">
   <div class="container">
-    <!-- Строка без переноса -->
-    <div style="display: flex; align-items: center; gap: 15px;">
+    <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
 
-      <!-- ТЕКСТ слева (занимает оставшееся место) -->
-      <div style="flex: 1; min-width: 0;">
-        <div class="hero-badge" style="font-size: 0.75rem; margin-bottom: 4px;">
+      <!-- ТЕКСТ слева -->
+      <div style="flex: 1 1 280px;">
+        <div class="hero-badge" style="font-size: 0.85rem; margin-bottom: 6px;">
           КЛИНИЧЕСКИЙ НУТРИЦИОЛОГ | ВРАЧ-ТЕРАПЕВТ
         </div>
-        <h1 style="font-size: 1.6rem; margin-bottom: 5px;">Наталья <span>Чернова</span></h1>
+        <h1 style="font-size: 2.2rem; margin-bottom: 10px;">Наталья <span>Чернова</span></h1>
         
-        <p style="font-size: 0.8rem; margin-bottom: 8px; color: var(--text-muted);">
+        <p style="font-size: 1rem; margin-bottom: 12px; color: var(--text-muted);">
           Вы сдавали анализы, но так и не поняли, что с ними делать?<br>
           Устали от диет, вздутия и вечной усталости?
         </p>
 
-        <!-- Список с галочками (очень мелко) -->
-        <div style="margin-bottom: 10px;">
-          <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75rem; margin-bottom: 3px;">
+        <!-- Список с галочками -->
+        <div style="margin-bottom: 15px;">
+          <div style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; margin-bottom: 5px;">
             <span style="color: var(--primary);">✅</span> разбираю анализы
           </div>
-          <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75rem; margin-bottom: 3px;">
+          <div style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; margin-bottom: 5px;">
             <span style="color: var(--primary);">✅</span> нахожу дефициты
           </div>
-          <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75rem; margin-bottom: 3px;">
+          <div style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; margin-bottom: 5px;">
             <span style="color: var(--primary);">✅</span> налаживаю ЖКТ
           </div>
-          <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75rem; margin-bottom: 3px;">
+          <div style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; margin-bottom: 5px;">
             <span style="color: var(--primary);">✅</span> корректирую вес
           </div>
-          <div style="display: flex; align-items: center; gap: 4px; font-size: 0.75rem; margin-bottom: 3px;">
+          <div style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; margin-bottom: 5px;">
             <span style="color: var(--primary);">✅</span> подбираю БАДы без вреда
           </div>
         </div>
 
-        <p style="font-size: 0.8rem; margin-bottom: 12px;">
+        <p style="font-size: 1rem; margin-bottom: 20px;">
           Индивидуальный план питания.<br>
           С опорой на доказательную медицину.
         </p>
 
-        <!-- Кнопки (мелкие) -->
-        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-          <a href="https://t.me/NataChYu" class="btn" style="padding: 6px 12px; font-size: 0.7rem;">Записаться</a>
-          <a href="https://t.me/Nata_nutrix" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.7rem;">Telegram</a>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="https://t.me/NataChYu" class="btn" style="padding: 10px 20px;">Записаться</a>
+          <a href="https://t.me/Nata_nutrix" class="btn btn-outline" style="padding: 10px 20px;">Telegram-канал</a>
         </div>
       </div>
 
-      <!-- ФОТО справа (фиксированная ширина) -->
-      <div style="flex: 0 0 140px;">
+      <!-- ФОТО справа -->
+      <div style="flex: 0 0 180px; text-align: right;">
         <img src="images/hero.jpg" alt="Наталья Чернова" 
-             style="width: 100%; border-radius: 20px; box-shadow: var(--shadow); border: 3px solid white;">
+             style="width: 100%; border-radius: 30px; box-shadow: var(--shadow); border: 4px solid white;">
       </div>
     </div>
   </div>
@@ -394,12 +392,8 @@
     .hero p, .hero .hero-badge {
       font-size: 1.2rem !important;
     }
-    .hero [style*="flex: 0 0 140px"] {
+    .hero [style*="flex: 0 0 180px"] {
       flex: 0 0 320px !important;
-    }
-    .hero .btn {
-      padding: 12px 24px !important;
-      font-size: 1rem !important;
     }
   }
 </style>
@@ -697,6 +691,7 @@
 </a>
 </body>
 </html>
+
 
 
 
