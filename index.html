@@ -621,9 +621,58 @@
         <p>© Информация на сайте носит ознакомительный характер и не является медицинской консультацией. Для постановки диагноза обратитесь к лечащему врачу</p>
     </div>
 </footer>
+<!-- ЛИПКАЯ КНОПКА TELEGRAM (правильный цвет) -->
+<style>
+  .telegram-sticky {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #27A7E7;  /* Фирменный голубой Telegram */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(39, 167, 231, 0.4);
+    z-index: 9999;
+    transition: 0.2s;
+    border: 2px solid white;
+    text-decoration: none;
+  }
+  .telegram-sticky:hover {
+    background: #1f8bcb;  /* Чуть темнее при наведении */
+    transform: scale(1.1);
+    box-shadow: 0 12px 28px rgba(39, 167, 231, 0.5);
+  }
+  .telegram-sticky svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+  }
+  /* На телефонах чуть меньше */
+  @media (max-width: 600px) {
+    .telegram-sticky {
+      width: 50px;
+      height: 50px;
+      bottom: 16px;
+      right: 16px;
+    }
+    .telegram-sticky svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+</style>
 
+<a href="https://t.me/Nata_nutrix" target="_blank" class="telegram-sticky" aria-label="Telegram-канал">
+  <svg viewBox="0 0 24 24">
+    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.97 9.273c-.146.658-.537.818-1.089.509l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.96-.99c-.643-.202-.655-.643.135-.953l11.56-4.456c.538-.196 1.01.129.832.941z"/>
+  </svg>
+</a>
 </body>
 </html>
+
 
 
 
