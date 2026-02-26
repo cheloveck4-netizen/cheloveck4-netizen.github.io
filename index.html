@@ -261,7 +261,59 @@
     </style>
 </head>
 <body>
+<!-- ======= ПЛАВАЮЩЕЕ МЕНЮ ======= -->
+<style>
+  .top-menu {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    padding: 12px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  .menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .menu-container a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+  }
+  .menu-container a:hover {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+  }
+  @media (max-width: 600px) {
+    .menu-container {
+      gap: 16px;
+      font-size: 0.9rem;
+    }
+  }
+</style>
 
+<div class="top-menu">
+  <div class="menu-container">
+    <a href="#about">👩 Обо мне</a>
+    <a href="#services">📋 Услуги</a>
+    <a href="#help">🌿 С чем помогаю</a>
+    <a href="#faq">❓ FAQ</a>
+    <a href="#contact">📞 Контакты</a>
+  </div>
+</div>
+<!-- ======= КОНЕЦ МЕНЮ ======= -->
+    
 <!-- ШАПКА -->
 <section class="hero">
     <div class="container hero-grid">
@@ -537,6 +589,7 @@
 
 </body>
 </html>
+
 
 
 
