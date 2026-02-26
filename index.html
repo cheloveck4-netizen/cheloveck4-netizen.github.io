@@ -266,40 +266,50 @@
   .top-menu {
     position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(8px);
     z-index: 1000;
-    padding: 12px 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
   }
   .menu-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 12px;
     display: flex;
-    justify-content: center;
-    gap: 32px;
-    flex-wrap: wrap;
+    gap: 6px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    align-items: center;
+  }
+  .menu-container::-webkit-scrollbar {
+    display: none;
   }
   .menu-container a {
     text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: color 0.2s;
-    padding: 6px 0;
-    border-bottom: 2px solid transparent;
+    color: #2c3e4f;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 5px 10px;
+    border-radius: 30px;
+    background: rgba(46, 125, 94, 0.04);
+    border: 1px solid rgba(46, 125, 94, 0.08);
+    transition: 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 1.2;
   }
   .menu-container a:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
+    background: #2d6a4f;
+    color: white;
   }
-  @media (max-width: 600px) {
-    .menu-container {
-      gap: 16px;
-      font-size: 0.9rem;
-    }
+  /* Делаем кнопку Контакты чуть заметнее */
+  .menu-container a[href="#contact"] {
+    background: rgba(46, 125, 94, 0.1);
+    border-color: rgba(46,  ., 94, 0.2);
   }
 </style>
 
@@ -589,6 +599,7 @@
 
 </body>
 </html>
+
 
 
 
