@@ -826,12 +826,12 @@
   }
 </style>
 
-    <!-- ЛИПКАЯ КНОПКА ЗВОНКА -->
+   <!-- ЛИПКАЯ КНОПКА ЗВОНКА (над Telegram) -->
 <style>
   .call-sticky {
     position: fixed;
-    bottom: 24px;
-    left: 24px;
+    bottom: 100px;  /* ровно над Telegram */
+    right: 24px;
     background: var(--primary);
     width: 60px;
     height: 60px;
@@ -854,12 +854,13 @@
     height: 28px;
     fill: white;
   }
+  /* На телефонах */
   @media (max-width: 600px) {
     .call-sticky {
       width: 50px;
       height: 50px;
-      bottom: 80px; /* чтобы не перекрывалась с Telegram */
-      left: 16px;
+      bottom: 90px;
+      right: 16px;
     }
   }
 </style>
@@ -871,6 +872,7 @@
 </a>
 </body>
 </html>
+
 
 
 
