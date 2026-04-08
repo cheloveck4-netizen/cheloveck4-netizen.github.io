@@ -420,7 +420,15 @@
             Telegram
           </a>
         </div>
+          <!-- КНОПКИ MAX В ШАПКЕ -->
+<a href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" class="btn" style="background: #E51917; display: inline-flex; align-items: center; gap: 6px;">
+    💬 Личное сообщение MAX
+</a>
+<a href="https://max.ru/id450400447149_biz" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 6px;">
+    📢 MAX-канал
+</a>
       </div>
+
 
       <!-- ФОТО (под текстом) -->
       <div style="text-align: center;">
@@ -465,6 +473,15 @@
         <a href="https://t.me/Nata_nutrix" class="btn">🔥 Полезные советы в Telegram</a>
         <a href="https://t.me/NataChYu" class="btn btn-outline" style="margin-left: 10px;">✍️ Задать вопрос</a>
     </div>
+    <!-- КНОПКИ MAX В РАЗДЕЛЕ "О СЕБЕ" -->
+<div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px;">
+    <a href="https://max.ru/id450400447149_biz" class="btn" style="background: #E51917; display: inline-flex; align-items: center; gap: 6px;">
+        📢 Полезные советы в MAX
+    </a>
+    <a href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 6px;">
+        ✍️ Задать вопрос в MAX
+    </a>
+</div>
 </section>
 
 <!-- С ЧЕМ ПОМОГАЮ + КАРТИНКИ -->
@@ -705,6 +722,12 @@
         <div>
             <h2>Свяжитесь со мной</h2>
             <div class="social-links">
+                <a href="https://max.ru/id450400447149_biz" target="_blank" style="display: inline-flex; align-items: center; gap: 8px;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="#E51917">
+        <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2z"/>
+    </svg>
+    MAX-канал
+</a>
                 <a href="tel:+79058210503" style="color: var(--text-muted); text-decoration: none; font-weight: 500;">📞 +7 (905) 821-05-03</a>
                 <a href="https://t.me/Nata_nutrix">📢 Telegram-канал</a>
                 <a href="https://t.me/NataChYu">💬 Написать лично</a>
@@ -715,6 +738,9 @@
             <p style="font-size: 1.8rem; font-weight: 800;">Запись онлайн</p>
             <p style="margin: 10px 0;">Наталья Чернова</p>
             <p>⏱️ Отвечаю в течение дня</p>
+            <a href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" class="btn btn-outline" style="border-color: white; color: white; margin-top: 15px; display: block; text-align: center;">
+    💬 Написать в MAX
+</a>
             <a href="https://t.me/NataChYu" class="btn" style="background: white; color: var(--primary); margin: 15px 0 10px; display: block;">Написать в Telegram</a>
             <a href="https://t.me/Nata_nutrix" class="btn btn-outline" style="border-color: white; color: white; display: block;">📢 Подписаться на канал</a>
         </div>
@@ -871,6 +897,49 @@
     <path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.5-6.5l2.2-2.2c.2-.2.3-.6.2-1-.3-1.1-.5-2.3-.5-3.6 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z"/>
   </svg>
 </a>
+<!-- ЛИПКАЯ КНОПКА MAX (личный профиль) -->
+<style>
+  .max-sticky {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #E51917;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(229, 25, 23, 0.4);
+    z-index: 9999;
+    transition: 0.2s;
+    border: 2px solid white;
+    text-decoration: none;
+  }
+  .max-sticky:hover {
+    background: #c41a18;
+    transform: scale(1.1);
+  }
+  .max-sticky svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+  }
+  @media (max-width: 600px) {
+    .max-sticky {
+      width: 50px;
+      height: 50px;
+      bottom: 16px;
+      right: 16px;
+    }
+  }
+</style>
+
+<a href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" class="max-sticky" aria-label="MAX">
+  <svg viewBox="0 0 24 24">
+    <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2z"/>
+  </svg>
+</a>    
 </body>
 </html>
 
