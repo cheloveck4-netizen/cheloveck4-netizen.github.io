@@ -1,985 +1,571 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta name="yandex-verification" content="f1147f7ec3861698" />    
-    <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106963668', 'ym');
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#fff8f4">
+  <meta name="description" content="Наталья Чернова — врач-терапевт, клинический нутрициолог. Индивидуальные консультации по питанию, разбор анализов, сопровождение. Запись онлайн.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <meta name="yandex-verification" content="f1147f7ec3861698">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Наталья Чернова — врач-терапевт, нутрициолог">
+  <meta property="og:description" content="Питание с опорой на доказательную медицину. Индивидуальный подход без жёстких диет и универсальных схем.">
+  <meta property="og:image" content="images/hero.jpg">
+  <title>Наталья Чернова — комфортный вес и здоровое питание</title>
+  <style>
+  :root{
+    --paper:#f6f6f0;--white:#fffefa;--ink:#1a3029;--muted:#5d6b61;--line:#dce3d8;
+    --dark:#21483b;--dark2:#16362d;--sage:#e9eee6;--sage2:#d5dfd2;--gold:#b68c61;
+    --serif:Georgia,'Times New Roman',serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+    --shadow:0 20px 55px rgba(29,57,43,.065)
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:95px}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}a{color:inherit}button{font:inherit}p{margin:0 0 20px}
+  h1,h2,h3,h4{margin:0;line-height:1.16}h1,h2,.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.037em}
+  .wrap{width:min(1168px,calc(100% - 48px));margin-inline:auto}
+  .eyebrow{font-size:11px;letter-spacing:.17em;text-transform:uppercase;font-weight:750;color:#728579}
+  .eyebrow::before{content:'';width:22px;height:1px;background:var(--gold);display:inline-block;vertical-align:middle;margin-right:11px}
+  .skip{position:fixed;top:-100px;left:12px;background:#fff;padding:12px;z-index:999}
+  .skip:focus{top:12px} :focus-visible{outline:3px solid #bd8d5e;outline-offset:3px}
+  .button{display:inline-flex;justify-content:center;align-items:center;gap:11px;padding:14px 22px;min-height:50px;
+    text-decoration:none;background:var(--dark);color:#fff;border:1px solid var(--dark);border-radius:10px;
+    font-weight:650;font-size:14px;letter-spacing:.01em;transition:transform .2s,background .2s,box-shadow .2s}
+  .button:hover{background:var(--dark2);transform:translateY(-2px);box-shadow:0 9px 20px rgba(32,73,56,.17)}
+  .button.secondary{background:transparent;border-color:#a9b9aa;color:var(--dark)}.button.secondary:hover{background:var(--sage)}
+  .button.light{background:#fffefa;color:var(--dark);border-color:#fffefa}.button.light:hover{background:#eff3eb}
+  .button svg{width:18px;height:18px;flex-shrink:0}
+  .site-header{position:sticky;top:0;z-index:80;background:rgba(247,248,244,.95);
+    border-bottom:1px solid rgba(51,78,57,.11);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+  .head-inner{min-height:84px;display:flex;align-items:center;gap:25px}
+  .logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
+  .logo-mark{display:grid;place-items:center;width:44px;height:44px;border:1px solid #9bad9d;border-radius:50%;
+    font:italic 23px var(--serif);letter-spacing:-.11em;color:var(--dark)}
+  .logo-copy{display:flex;flex-direction:column;line-height:1.2;gap:4px}.logo-copy strong{font:500 20px var(--serif);letter-spacing:-.04em}
+  .logo-copy small{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#718477}
+  .nav{margin-left:auto;display:flex;align-items:center;gap:26px}.nav a{font-size:13px;font-weight:650;text-decoration:none;color:#43594b;transition:color .2s}
+  .nav a:hover{color:#9f7850}.head-cta{padding:11px 16px;min-height:43px;white-space:nowrap;font-size:13px}
+  .menu-toggle{display:none;background:transparent;border:0;cursor:pointer;width:44px;height:44px;margin-left:auto;
+    border-radius:8px;color:var(--dark);font-size:24px}
+  .hero{background:radial-gradient(ellipse at 87% 23%,#e7ecdf 0,transparent 43%),linear-gradient(150deg,#f9faf5 0%,#f1f3ec 96%);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(30px,5vw,80px);align-items:center;padding:77px 0 92px}
+  .hero-copy{padding:14px 0 0;max-width:665px}.hero .eyebrow{margin-bottom:24px}
+  h1{font-size:clamp(52px,5.7vw,82px);line-height:1.065;color:#1d3e31;max-width:690px}
+  h1 em{color:#748977;font-weight:400;font-style:italic} .hero-lead{font-size:18px;line-height:1.68;color:#576b60;margin:28px 0 28px;max-width:530px}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:38px}
+  .proof-line{display:flex;align-items:center;flex-wrap:wrap;gap:20px;border-top:1px solid #d5dfd1;padding-top:24px;max-width:580px}
+  .proof-item{display:flex;flex-direction:column;gap:3px;max-width:215px}.proof-item strong{font:400 26px/1.1 var(--serif);color:#224739}
+  .proof-item span{font-size:12px;color:#6b7a6b}.proof-sep{width:1px;height:37px;background:#c8d3c5}
+  .hero-visual{position:relative;min-width:0;padding:24px 21px 28px 0}
+  .hero-visual::before{content:'';position:absolute;inset:66px -13px 0 58px;border-radius:210px 210px 14px 14px;
+    background:linear-gradient(155deg,#c7d7c7,#dee7d9)}
+  .portrait-frame{position:relative;overflow:hidden;aspect-ratio:4/5.05;border-radius:215px 215px 18px 18px;
+    background:linear-gradient(135deg,#dce6d8,#bccdbd);box-shadow:0 24px 70px rgba(31,63,43,.13)}
+  .portrait-frame img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+  .image-fallback{position:absolute;inset:0;display:grid;align-items:center;justify-content:center;background:linear-gradient(145deg,#d2e2d0,#a9c4b4)}
+  .image-fallback span{font:italic 112px var(--serif);color:rgba(255,255,255,.56);letter-spacing:-.15em}
+  .portrait-frame img{position:relative;z-index:2}.portrait-frame.has-error img{display:none}
+  .picture-note{position:absolute;z-index:3;left:-37px;bottom:70px;background:#fffefa;border:1px solid #e4e9dd;
+    border-radius:12px;padding:17px 20px;box-shadow:var(--shadow);max-width:260px}
+  .picture-note strong{display:block;font:23px/1.16 var(--serif);margin-bottom:4px;color:#264c3e}
+  .picture-note span{font-size:12px;line-height:1.4;color:#718175}
+  .sec{padding:98px 0}.section-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:36px}
+  .section-intro h2,.section-title{font-size:clamp(37px,4vw,57px);margin-top:15px;max-width:755px}
+  .section-intro p{max-width:350px;color:var(--muted);font-size:15px;line-height:1.7;margin:0}
+  .white-section{background:var(--white)}.sage-section{background:#eaf0e9}
+  .trust-strip{background:#284a3d;color:#fff;border-bottom:1px solid #426053}
+  .trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:30px 0}
+  .trust-row div{display:flex;gap:13px;align-items:flex-start;border-right:1px solid rgba(255,255,255,.17);padding-right:20px}
+  .trust-row div:last-child{border:0}.trust-icon{font:28px var(--serif);color:#d2c7a4;line-height:1}
+  .trust-row strong{display:block;font-size:14px;font-weight:650;line-height:1.35}.trust-row small{display:block;color:#c5d3c6;font-size:12px;margin-top:5px;line-height:1.5}
+  .about-grid{display:grid;grid-template-columns:.65fr 1.35fr;gap:clamp(25px,8vw,130px)}
+  .about-side{position:relative}.about-side .eyebrow{margin:6px 0 15px}.about-side .section-title{font-size:clamp(38px,4.4vw,60px);line-height:1.08}
+  .about-text{font-size:18px;color:#506457;line-height:1.8}.about-text p+p{margin-top:20px}.about-metrics{display:flex;flex-wrap:wrap;gap:46px;margin-top:36px}
+  .about-metrics b{display:block;font:43px var(--serif);color:var(--dark)}.about-metrics small{font-size:13px;color:#758375}
+  .about-footnote{font-size:12px;color:#718174;margin-top:23px;max-width:560px}
+  .problems{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+  .problem{border:1px solid #e4e9e1;background:#fffefa;border-radius:17px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+  .problem:hover,.article:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .image-box{height:174px;background:#dce5d8;overflow:hidden;position:relative}.image-box img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+  .problem:hover .image-box img,.article:hover .image-box img{transform:scale(1.035)}
+  .image-box .color-fallback{display:none;position:absolute;inset:0;background:linear-gradient(140deg,#dce7d9,#b8cdbc)}
+  .problem-body{padding:22px}.problem h3{font:400 24px/1.16 var(--serif);margin-bottom:12px;color:#274638}
+  .problem p{color:#627368;font-size:14px;line-height:1.65;margin:0}.problem-num{font-size:11px;letter-spacing:.1em;color:#99a496;margin-bottom:10px}
+  .prices-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;min-width:0}
+  .price-card{display:flex;flex-direction:column;min-width:0;background:#fffefa;border:1px solid #e0e7dc;border-radius:20px;
+    padding:clamp(25px,3vw,42px);min-height:365px;transition:transform .2s,box-shadow .2s}
+  .price-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .price-card.featured{background:#26483b;color:#fff;border-color:#26483b}
+  .price-head{display:flex;justify-content:space-between;gap:20px;align-items:start;margin-bottom:25px;flex-wrap:wrap}
+  .price-card h3{font:400 clamp(24px,2.6vw,31px)/1.18 var(--serif)}.price-badge{display:inline-block;
+    background:#dce8d8;color:#315345;padding:5px 9px;border-radius:6px;font-size:11px;white-space:nowrap;font-weight:700}
+  .price-amount{font:400 42px/1 var(--serif);letter-spacing:-.055em;margin-bottom:20px}
+  .price-card ul{list-style:none;margin:0 0 24px;padding:0;flex:1}.price-card li{padding:7px 0 7px 22px;position:relative;
+    color:#637266;font-size:14px;line-height:1.45}.price-card li::before{content:'✓';position:absolute;left:0;color:#719578}
+  .price-card.featured li{color:#dce6dc}.price-card.featured li::before{color:#c9ddbc}
+  .price-card .button{align-self:flex-start}.price-card.featured .button{background:#f8f8ef;color:#26483b;border-color:#f8f8ef}
+  .prices-note{margin:22px 0 0;color:#6a786e;font-size:13px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .step{position:relative;background:var(--white);border:1px solid #e0e8dd;border-radius:17px;padding:30px;min-height:190px}
+  .step-number{font:italic 44px/1 var(--serif);color:#bdcdbc}.step h3{font:400 23px var(--serif);margin:17px 0 9px}
+  .step p{color:#69796d;font-size:14px;line-height:1.6;margin:0}
+  .rules-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:start}
+  .rules-wrap h2{font-size:clamp(37px,4.3vw,57px);margin:15px 0 25px}.rules-wrap .blurb{color:#586b5f;font-size:16px;line-height:1.75}
+  .rules-list{display:grid;gap:8px}.rule{padding:0 19px;border:1px solid #d9e4d8;background:rgba(255,255,255,.7);border-radius:12px}
+  .rule summary{list-style:none;cursor:pointer;padding:19px 0;font-size:15px;color:#294b3c;font-weight:650;display:flex;justify-content:space-between;gap:12px;align-items:center}
+  .rule summary::-webkit-details-marker{display:none}.rule summary::after{content:'+';font-size:23px;line-height:1;color:#7d9a86;font-weight:400}
+  .rule[open] summary::after{content:'–'}.rule p{margin:0 0 19px;font-size:14px;line-height:1.65;color:#67786d}
+  .articles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+  .article{overflow:hidden;border:1px solid #e2e7df;background:#fffefa;border-radius:17px;transition:transform .2s,box-shadow .2s}
+  .article .image-box{height:166px}.article .inner{padding:21px}.article h3{font:400 22px/1.2 var(--serif);margin:0 0 9px}
+  .article p{font-size:13px;color:#66776c;line-height:1.55;margin:0 0 15px}.text-link{font-size:14px;font-weight:700;color:var(--dark);text-decoration:none}
+  .text-link:hover{text-decoration:underline}.text-link::after{content:' ↗'}
+  .faq-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.faq{background:#fffefa;border:1px solid #e0e6de;padding:0 24px;border-radius:15px}
+  .faq summary{list-style:none;cursor:pointer;display:flex;gap:16px;justify-content:space-between;align-items:center;padding:24px 0;
+    font-size:16px;font-weight:650;color:#264537;line-height:1.4}
+  .faq summary::-webkit-details-marker{display:none}.faq summary::after{content:'+';font-size:24px;line-height:1;color:#809b83;flex-shrink:0;font-weight:400}
+  .faq[open] summary::after{content:'–'}.faq p{color:#69776c;font-size:14px;margin:0 0 22px;line-height:1.7}
+  .contact{background:#214338;color:#fff}.contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+  .contact .eyebrow{color:#d0d8bf}.contact .eyebrow::before{background:#d0be93}
+  .contact h2{font-size:clamp(41px,4.7vw,68px);max-width:610px;margin:19px 0 25px}
+  .contact-lead{color:#cbd9cf;font-size:17px;line-height:1.7;max-width:530px}
+  .contact-lines{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.contact-lines a{color:#e0eee3;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.45);font-size:14px}
+  .contact-panel{padding:42px;background:#f9f9f3;color:var(--ink);border-radius:22px;box-shadow:0 30px 80px rgba(9,29,19,.12)}
+  .contact-panel h3{font:400 31px/1.2 var(--serif);margin-bottom:12px}.contact-panel p{font-size:14px;color:#64766a;margin-bottom:22px}
+  .contact-panel .button{width:100%;margin-top:9px}.contact-panel .button.secondary{border-color:#c8d5c8}
+  .contact-panel small{display:block;font-size:12px;color:#788879;line-height:1.5;margin-top:15px}
+  footer{background:#172f27;color:#b8c8bc;padding:33px 0 35px;font-size:12px}
+  .footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;align-items:flex-start}
+  footer .brand{font:24px var(--serif);color:#ecf0e9}footer p{max-width:740px;margin:8px 0 0;line-height:1.7}
+  .footer-links{display:flex;gap:17px;align-items:center;flex-wrap:wrap}.footer-links a{color:#d3e1d4;text-decoration:none}
+  .mobile-cta{display:none}.preview-banner{background:#e4ddca;color:#30443a;padding:9px 15px;text-align:center;font-size:12px;font-weight:700}
+  @media(max-width:1060px){
+    .nav{gap:16px}.head-cta{display:none}.hero-grid{grid-template-columns:1fr .86fr}
+    .problems,.articles{grid-template-columns:repeat(2,minmax(0,1fr))}.about-grid{gap:60px}
+  }
+  @media(max-width:740px){
+    html{scroll-padding-top:76px}.wrap{width:min(100% - 36px,550px)}.head-inner{min-height:69px}
+    .logo-mark{width:37px;height:37px;font-size:20px}.logo-copy strong{font-size:18px}.logo-copy small{font-size:9px}
+    .menu-toggle{display:grid;place-items:center}.nav{display:none;position:absolute;left:0;right:0;top:100%;margin:0;
+      flex-direction:column;gap:0;align-items:stretch;padding:10px 18px 18px;border-bottom:1px solid var(--line);background:#f9faf5;box-shadow:var(--shadow)}
+    .nav.is-open{display:flex}.nav a{display:block;padding:12px 10px;font-size:15px}.head-cta{display:none}
+    .hero-grid{grid-template-columns:1fr;gap:33px;padding:47px 0 73px}.hero .eyebrow{margin-bottom:18px}
+    h1{font-size:clamp(48px,12.6vw,70px)}.hero-lead{font-size:16px;margin:21px 0 24px}
+    .hero-ctas{margin-bottom:27px}.hero-ctas .button{flex:1 1 175px;padding:12px 15px}
+    .proof-line{gap:18px}.proof-item strong{font-size:23px}
+    .hero-visual{max-width:490px;margin:0 auto;width:100%;padding:15px 14px 19px 0}
+    .hero-visual::before{inset:53px -8px 0 48px}.portrait-frame{aspect-ratio:4/4.6}
+    .picture-note{left:-7px;bottom:38px;padding:11px 14px;max-width:218px}
+    .picture-note strong{font-size:19px}.picture-note span{font-size:11px}
+    .trust-row{grid-template-columns:1fr;gap:16px;padding:23px 0}.trust-row div{border:0;padding:0}.trust-icon{font-size:25px}
+    .sec{padding:71px 0}.section-intro{display:block;margin-bottom:27px}.section-intro h2,.section-title{font-size:clamp(36px,9.8vw,51px)}
+    .section-intro p{margin-top:16px}.about-grid,.rules-wrap,.contact-grid{grid-template-columns:1fr;gap:24px}
+    .about-side .section-title{max-width:420px}.about-text{font-size:16px}.about-metrics{margin-top:26px;gap:35px}
+    .problems,.prices-grid,.steps,.articles,.faq-list{grid-template-columns:minmax(0,1fr);gap:13px}
+    .problem{display:grid;grid-template-columns:116px 1fr;min-height:145px}.problem .image-box{height:100%;min-height:145px}
+    .problem-body{padding:17px 15px}.problem h3{font-size:21px;margin-bottom:6px}.problem p{font-size:13px;line-height:1.5}
+    .price-card{min-height:0;padding:25px}.price-head{margin-bottom:19px}.price-amount{font-size:38px}.price-card li{padding-top:5px;padding-bottom:5px}
+    .step{min-height:0;padding:25px}.rules-wrap{gap:19px}.rule{padding:0 15px}
+    .article{display:grid;grid-template-columns:118px 1fr;min-height:165px}.article .image-box{height:100%;min-height:165px}
+    .article .inner{padding:18px 14px}.article h3{font-size:21px}.article p{font-size:12px}
+    .faq{padding:0 18px}.faq summary{padding:20px 0}.contact-grid{gap:25px}
+    .contact-panel{padding:27px}.contact-panel h3{font-size:28px}.contact h2{font-size:clamp(41px,11vw,60px)}
+    footer{padding:32px 0 95px}.footer-grid{flex-direction:column;gap:16px}
+    .mobile-cta{display:flex;position:fixed;bottom:max(12px,env(safe-area-inset-bottom));left:15px;right:15px;z-index:77;
+      min-height:54px;align-items:center;justify-content:center;background:#21483b;color:#fff;text-decoration:none;
+      font-weight:750;border-radius:12px;box-shadow:0 12px 30px rgba(20,60,38,.3);font-size:15px}
+  }
+  @media(max-width:395px){.logo-copy small{letter-spacing:.045em}.proof-item{max-width:170px}.problem{grid-template-columns:100px 1fr}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+  /* 2026 editorial wellness refresh — colour, typography and subtle glamour */
+:root {
+  --paper:#fff8f4;
+  --white:#fffdfb;
+  --ink:#45323a;
+  --muted:#73656a;
+  --line:#eadbd8;
+  --dark:#6c394d;
+  --dark2:#502738;
+  --sage:#faefed;
+  --sage2:#efdee0;
+  --gold:#b9886f;
+  --serif:'Playfair Display','Georgia',serif;
+  --sans:'Manrope','Segoe UI',Arial,sans-serif;
+  --shadow:0 20px 55px rgba(105,57,65,.09);
+}
+html{scroll-padding-top:96px}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75}
+h1,h2,.serif{font-family:var(--serif);letter-spacing:-.055em;font-weight:500}
+h3{letter-spacing:-.02em}
+h1 em,h2 em{font-style:italic;color:#af7182;font-weight:500}
+.eyebrow{font-size:11px;letter-spacing:.16em;color:#99717a;font-weight:800}
+.eyebrow::before{width:24px;height:2px;background:linear-gradient(90deg,#b98168,#e5c7a7);border-radius:8px}
+a:focus-visible,button:focus-visible{outline-color:#bf7f88}
+.wrap{width:min(1190px,calc(100% - 56px))}
+/* Header: airy editorial boutique aesthetic */
+.site-header{background:rgba(255,249,247,.94);border-bottom:1px solid #efdeda;box-shadow:0 5px 20px rgba(124,60,72,.025)}
+.head-inner{min-height:88px}
+.logo-mark{border:1px solid #c997a1;color:#884e60;background:#fff1ef;width:48px;height:48px;
+  font-size:21px;box-shadow:0 4px 18px rgba(112,64,80,.06)}
+.logo-copy strong{font:500 20px/1.18 var(--serif);letter-spacing:-.04em;color:#5b3745}
+.logo-copy small{color:#9e7d81;font-size:9px;letter-spacing:.13em;font-weight:700}
+.nav{gap:23px}
+.nav a{font-size:12px;color:#654c55;font-weight:700}
+.nav a:hover{color:#ad6c7e}
+.head-cta{min-height:43px}
+.button{background:linear-gradient(135deg,#793f56 0%,#65364b 100%);border-color:#713c51;border-radius:12px;
+  min-height:52px;padding:15px 24px;font-size:13px;letter-spacing:.02em;box-shadow:0 11px 25px rgba(101,53,74,.14)}
+.button:hover{background:linear-gradient(135deg,#65344b 0%,#502639 100%);box-shadow:0 14px 28px rgba(101,53,74,.19)}
+.button.secondary{background:rgba(255,253,250,.62);color:#77475a;border:1px solid #cb9a9f;box-shadow:none}
+.button.secondary:hover{background:#fff2ef;color:#663849}
+.button.light{background:#fff7f4;color:#643849;border-color:#fff7f4}
+/* Main stage: blush/pearl/champagne, not plain medical green */
+.hero{position:relative;isolation:isolate;
+  background:
+    radial-gradient(ellipse 76% 85% at 96% 20%,rgba(229,177,185,.55) 0%,transparent 65%),
+    radial-gradient(ellipse 65% 58% at 9% 100%,rgba(255,242,218,.82) 0%,transparent 76%),
+    linear-gradient(117deg,#fffaf6 2%,#f9eae7 64%,#f5dfe1 100%);
+  overflow:hidden}
+.hero::before{content:'';position:absolute;width:750px;height:750px;right:-345px;top:-365px;
+  border:1px solid rgba(184,126,139,.22);border-radius:50%;box-shadow:0 0 0 55px rgba(255,255,255,.065),0 0 0 130px rgba(255,255,255,.035);pointer-events:none;z-index:-1}
+.hero::after{content:'✧';position:absolute;top:60px;right:9%;font:70px/1 Georgia,serif;
+  color:rgba(169,103,123,.16);pointer-events:none;transform:rotate(-12deg)}
+.hero-grid{grid-template-columns:1.05fr .95fr;gap:clamp(45px,5vw,82px);padding:85px 0 101px}
+.hero-copy{max-width:680px;padding-top:4px}
+.hero .eyebrow{display:inline-flex;align-items:center;min-height:38px;padding:5px 15px;
+  margin-bottom:27px;border:1px solid rgba(177,117,127,.32);border-radius:100px;
+  color:#8c5867;background:rgba(255,253,249,.46);font-size:10px;letter-spacing:.11em}
+.hero .eyebrow::before{content:'✦';width:auto;height:auto;background:none;color:#be8b6d;font:11px/1 var(--sans);margin-right:11px}
+h1{font-family:var(--serif);font-size:clamp(50px,5.4vw,80px);line-height:1.15;
+  max-width:650px;letter-spacing:-.065em;color:#573443;font-weight:500}
+h1 em{display:inline;color:#ba7288;font-weight:500;text-shadow:0 5px 35px rgba(177,92,112,.065)}
+.hero-lead{font-size:16.5px;line-height:1.85;color:#69565d;max-width:520px;margin:25px 0 30px;font-weight:500}
+.hero-ctas{gap:10px;margin-bottom:31px}
+.hero-ctas .button{border-radius:13px;padding-inline:24px}
+.proof-line{border-top:1px solid rgba(158,107,114,.28);padding-top:24px;gap:19px}
+.proof-item strong{color:#704758;font:500 26px/1.15 var(--serif)}
+.proof-item span{color:#92747c;font-size:11.5px;font-weight:600}
+.proof-sep{background:rgba(151,102,113,.3)}
+.hero-visual{padding:22px 16px 35px 0}
+.hero-visual::before{inset:70px -18px 1px 63px;border-radius:250px 250px 26px 26px;
+  background:linear-gradient(155deg,#f3cbd0 0%,#e8b9c0 58%,#f5e5db 100%);
+  box-shadow:0 18px 40px rgba(151,84,103,.11)}
+.portrait-frame{position:relative;aspect-ratio:4/5.08;
+  border:7px solid rgba(255,255,255,.56);border-radius:260px 260px 26px 26px;
+  background:linear-gradient(135deg,#f7dee0,#ddb2bc);box-shadow:0 28px 85px rgba(122,68,83,.18)}
+.portrait-frame::after{content:'';position:absolute;inset:11px;z-index:2;pointer-events:none;
+  border:1px solid rgba(255,248,239,.5);border-radius:250px 250px 18px 18px}
+.image-fallback{background:
+ radial-gradient(ellipse at 35% 27%,rgba(255,246,233,.85),transparent 56%),
+ linear-gradient(155deg,#f3cdd1,#c998a8);}
+.image-fallback span{font:italic 110px var(--serif);color:rgba(255,255,255,.78);letter-spacing:-.13em;
+ text-shadow:0 10px 18px rgba(145,83,99,.10)}
+.picture-note{background:rgba(255,252,248,.97);border:1px solid #ebd7ce;border-radius:16px;
+  bottom:73px;left:-40px;padding:19px 22px 18px;box-shadow:0 18px 48px rgba(95,48,67,.13);max-width:257px}
+.picture-note::before{content:'✧';position:absolute;right:15px;top:7px;color:#c18f75;font-size:26px}
+.picture-note strong{color:#6e4053;font:500 19px/1.3 var(--serif);margin-bottom:7px;max-width:190px}
+.picture-note span{font-size:11px;color:#9a7b81;line-height:1.5;font-weight:600}
+/* brand confidence section — soft instead of hard dark bar */
+.trust-strip{background:#fcf1ed;color:#654453;border-bottom:1px solid #efddd7}
+.trust-row{padding:30px 0;gap:25px}
+.trust-row div{border-right-color:#e7cfcf}
+.trust-icon{color:#bf8191;font-size:32px}
+.trust-row strong{color:#6b4252;font-size:13px;font-weight:750}
+.trust-row small{color:#997b80;font-size:11.5px}
+/* Sections with rhythm and sophisticated wine-on-ivory palette */
+.sec{padding:100px 0}
+.white-section{background:#fffdfb}
+#help,#process,#faq{background:#fff8f6}
+.section-intro h2,.section-title,.rules-wrap h2{color:#614050;
+  font-size:clamp(39px,4vw,57px);line-height:1.26;font-weight:500}
+.section-intro p,.about-text,.about-footnote{color:#78636b}
+.about-side .section-title{line-height:1.28}
+.about-text{font-size:16.5px}.about-metrics b{color:#8f5b6b;font-family:var(--serif)}
+.about-metrics small{color:#9b7d84}
+.problems{gap:20px}
+.problem,.article{background:#fffdfb;border:1px solid #eadbd8;border-radius:21px;
+  box-shadow:0 9px 22px rgba(130,82,91,.045)}
+.problem:hover,.article:hover{box-shadow:0 22px 40px rgba(130,82,91,.12);border-color:#dfb9c1}
+.image-box{background:#efdde0}
+.image-box .color-fallback{background:linear-gradient(150deg,#fbe5db,#dfb9c6)}
+.problem-body{padding:23px}.problem h3{color:#6d4254;font:500 23px/1.33 var(--serif)}
+.problem p,.article p{color:#87747c}.problem-num{color:#b68b95;font-weight:750;letter-spacing:.14em}
+.prices-grid{gap:20px}
+.price-card{background:#fffaf7;border:1px solid #ebd8d7;border-radius:22px;
+  box-shadow:0 8px 28px rgba(121,63,82,.045)}
+.price-card:hover{box-shadow:0 23px 48px rgba(121,63,82,.11)}
+.price-card h3,.price-amount{font-family:var(--serif);color:#653e4d}
+.price-card .button.secondary{background:#fff7f3}
+.price-card.featured{position:relative;
+  background:radial-gradient(ellipse at 92% 12%,rgba(246,204,192,.22),transparent 60%),
+    linear-gradient(145deg,#774457,#60384b);
+  border-color:#795065;box-shadow:0 16px 39px rgba(107,58,81,.13)}
+.price-card.featured h3,.price-card.featured .price-amount{color:#fff2e9}
+.price-card.featured li{color:#f1dfe4}
+.price-card.featured .button{background:#fff1e8;color:#6d3b4f;border:1px solid #fff1e8;box-shadow:none}
+.price-card.featured .button:hover{background:#fff9f1}
+.price-badge{background:#f4d3d1;color:#6e3f54}
+.prices-note{color:#957981}
+.step{background:#fffdfa;border:1px solid #ecdeda;border-radius:21px;box-shadow:0 9px 25px rgba(126,79,85,.045)}
+.step-number{color:#c68e9b;font-family:var(--serif);font-size:34px}
+.step h3{color:#664356;font-weight:750}.step p{color:#866e76}
+.sage-section{background:
+ radial-gradient(ellipse at 0% 50%,rgba(255,240,221,.8),transparent 60%),
+ linear-gradient(135deg,#fce8e8,#f8e9e7 55%,#f3e1e3)}
+.rules-wrap h2{color:#653f51}
+.rules-wrap .blurb{color:#876b76}
+.rule,.faq{background:rgba(255,252,249,.84);border-color:#e8d3d5;border-radius:15px}
+.rule summary,.faq summary{color:#6a4356}
+.rule summary::after,.faq summary::after{color:#c08d99}
+.rule p,.faq p{color:#82707a}
+.article{border-radius:20px}.article h3{color:#694254;font-family:var(--serif);font-weight:500}
+.text-link{color:#965d72}.text-link:hover{color:#754556}
+.contact{position:relative;background:
+  radial-gradient(ellipse at 5% 20%,rgba(195,137,150,.29),transparent 43%),
+  linear-gradient(130deg,#613648,#563042 57%,#48283a);color:#fff8f4}
+.contact .eyebrow{color:#e6b7b2}.contact .eyebrow::before{background:#e5bca4}
+.contact h2{font-weight:500;color:#fff9f1}
+.contact-lead{color:#edd8de}.contact-lines a{color:#ffe6e6;border-bottom-color:#d1a2a5}
+.contact-panel{background:#fffaf7;color:#6b4052;border:1px solid rgba(249,235,225,.6);
+  box-shadow:0 25px 65px rgba(43,19,32,.25)}
+.contact-panel h3{font-family:var(--serif);font-weight:500;color:#653d50}
+.contact-panel p,.contact-panel small{color:#947a83}
+.contact-panel .button.secondary{border-color:#e2c4cc;background:#fffaf7}
+footer{background:#38232e;color:#d4bdc3}footer .brand{font:500 24px var(--serif);color:#fff1ee}
+footer .footer-links a{color:#f5e1e5}
+.mobile-cta{background:linear-gradient(135deg,#82465b,#62354a);border:1px solid rgba(255,223,224,.4);
+  box-shadow:0 12px 33px rgba(84,39,58,.3);border-radius:14px}
+/* Crisp hover effects, no distracting motion */
+@media(max-width:1060px){.nav{gap:15px}}
+@media(max-width:740px){
+ html{scroll-padding-top:77px}.wrap{width:min(100% - 36px,550px)}
+ .head-inner{min-height:69px}.logo-mark{height:39px;width:39px;font-size:17px}
+ .logo-copy strong{font-size:17px}
+ .nav{background:rgba(255,249,246,.99);border-bottom:1px solid #ecd8d9}
+ .nav a{color:#674d57;font-size:14px}
+ .menu-toggle{color:#734758}
+ .hero-grid{grid-template-columns:minmax(0,1fr);padding:47px 0 77px;gap:34px}.hero .eyebrow{font-size:9px;line-height:1.3;min-height:34px;padding:7px 10px;margin-bottom:23px}
+ h1{font-size:clamp(48px,11.5vw,66px);line-height:1.2;letter-spacing:-.055em;max-width:460px}
+ .hero-lead{font-size:15px;line-height:1.78;margin:22px 0 27px}
+ .hero-ctas{margin-bottom:27px}.hero-ctas .button{padding:12px 13px;font-size:12px;min-height:52px}
+ .proof-line{padding-top:19px}.proof-item strong{font-size:22px}
+ .hero-visual{padding:12px 18px 22px 0}
+ .hero-visual::before{inset:49px -5px 0 48px}
+ .portrait-frame{aspect-ratio:4/4.6;border-width:5px;border-radius:220px 220px 20px 20px}
+ .picture-note{left:-6px;bottom:40px;padding:13px 16px;max-width:219px}
+ .picture-note strong{font-size:16px;max-width:170px}.picture-note span{font-size:10px}
+ .sec{padding:75px 0}.section-intro h2,.section-title{font-size:clamp(37px,8.9vw,48px)}
+ .about-text{font-size:15px}.problem h3{font-size:19px}.problem-body{padding:16px}
+ .price-card h3{font-size:24px}.price-card{padding:25px}
+ .trust-row{padding:23px 0}
+ .contact-panel{padding:26px}.contact h2{font-size:clamp(43px,10vw,59px)}
+ footer{padding-bottom:95px}.mobile-cta{min-height:55px}
+}
+@media(max-width:390px){h1{font-size:47px}.hero .eyebrow{letter-spacing:.065em;font-size:9px}.proof-item strong{font-size:21px}}
+@media(prefers-reduced-motion:reduce){.hero-visual,.button,.problem,.article,.price-card{animation:none!important}}
 
-    ym(106963668, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/106963668" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Наталья Чернова | Врач-нутрициолог</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        :root {
-            --primary: #2d6a4f;
-            --primary-dark: #1b4d3a;
-            --primary-light: #d8f3dc;
-            --bg-light: #fefcf5;
-            --text-dark: #1e2f23;
-            --text-muted: #4a5f52;
-            --accent: #bb6b4a;
-            --white: #ffffff;
-            --shadow: 0 20px 30px -10px rgba(0,40,20,0.1);
-        }
-        body {
-            font-family: 'Nunito', sans-serif;
-            background: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.5;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        h2 {
-            font-size: 2.4rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            position: relative;
-            display: inline-block;
-        }
-        h2:before { content: "🌿 "; }
-        h2:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 80px;
-            height: 4px;
-            background: var(--primary);
-            border-radius: 4px;
-        }
-        .btn {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            font-weight: 600;
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: 0.2s;
-            margin: 5px;
-        }
-        .btn:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-        }
-        .btn-outline:hover {
-            background: var(--primary);
-            color: white;
-        }
-        .btn-small { padding: 8px 20px; }
-        .btn-center { text-align: center; margin: 30px 0; }
-        
-        .hero {
-    padding: 40px 0;
-    background: linear-gradient(135deg, #fefcf5, #f1f7f0);
-    position: relative;
-}
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="1" stitchTiles="stitch"/></filter><rect width="100" height="100" filter="url(%23noise)" opacity="0.02"/></svg>');
-    pointer-events: none;
-    z-index: 0;
-}
-.hero .container {
-    position: relative;
-    z-index: 1;
-}
-        .hero-grid {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-        .hero-content { flex: 1 1 400px; }
-        .hero-badge {
-            background: rgba(45,106,79,0.1);
-            color: var(--primary-dark);
-            padding: 6px 18px;
-            border-radius: 50px;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-        .hero-content h1 { font-size: 3.2rem; font-weight: 800; }
-        .hero-content h1 span { color: var(--primary); }
-        .hero-image { flex: 1 1 300px; text-align: center; }
-        .hero-image img {
-            width: 100%;
-            max-width: 380px;
-            border-radius: 40px;
-            box-shadow: var(--shadow);
-            border: 4px solid white;
-        }
-        .section { padding: 60px 0; }
-        .section-alt { background: white; }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-            gap: 25px;
-            margin: 30px 0;
-        }
-        .service-card {
-            background: white;
-            border-radius: 30px;
-            padding: 30px;
-            box-shadow: var(--shadow);
-            text-align: center;
-        }
-        .price { font-size: 2rem; color: var(--primary); font-weight: 700; margin: 15px 0; }
-        
-        .problems-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-            gap: 25px;
-            margin: 30px 0;
-        }
-        .problem-card {
-            background: white;
-            border-radius: 30px;
-            padding: 25px;
-            box-shadow: var(--shadow);
-        }
-        .problem-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 20px;
-            margin-bottom: 15px;
-        }
-        .problem-title { font-size: 1.4rem; font-weight: 700; color: var(--primary-dark); }
-        
-        .rules-section {
-            background: linear-gradient(rgba(254,252,245,0.9), rgba(254,252,245,0.9)), url('images/rules-bg.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-        }
-        .rules-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        .rule-item {
-            background: white;
-            padding: 25px;
-            border-radius: 30px;
-            box-shadow: var(--shadow);
-        }
-        .rule-title { font-size: 1.3rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 8px; }
-        
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-            gap: 25px;
-            margin: 30px 0;
-        }
-        .step-card {
-            background: white;
-            border-radius: 30px;
-            padding: 25px;
-            box-shadow: var(--shadow);
-        }
-        .step-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 20px;
-            margin-bottom: 15px;
-        }
-        
-        .telegram-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        .telegram-card {
-            background: white;
-            border-radius: 30px;
-            padding: 20px;
-            box-shadow: var(--shadow);
-        }
-        .telegram-card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 20px;
-            margin-bottom: 10px;
-        }
-        
-        .faq-grid {
-            display: grid;
-            gap: 15px;
-            margin: 30px 0;
-        }
-        .faq-item {
-            background: white;
-            padding: 25px;
-            border-radius: 30px;
-            box-shadow: var(--shadow);
-        }
-        .faq-question { font-weight: 700; color: var(--primary-dark); margin-bottom: 8px; font-size: 1.1rem; }
-        
-        .contact-flex {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .social-links a {
-            display: inline-block;
-            background: white;
-            border-radius: 50px;
-            padding: 12px 24px;
-            margin: 5px;
-            text-decoration: none;
-            color: var(--text-dark);
-            box-shadow: var(--shadow);
-        }
-        .social-links a:hover { background: var(--primary); color: white; }
-        
-        footer {
-            padding: 30px 0;
-            text-align: center;
-            color: var(--text-muted);
-            border-top: 1px solid rgba(0,0,0,0.05);
-        }
-    </style>
+
+/* Image failure doesn't display the browser's broken image glyph. */
+.image-box.broken{background:
+  radial-gradient(circle at 75% 25%,rgba(255,247,236,.8),transparent 42%),
+  linear-gradient(145deg,#f5e0da 0%,#e9c9cf 60%,#d9b1bf 100%);}
+.image-box.broken::after{content:'✧';position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);
+  font:72px/1 var(--serif);color:rgba(255,255,255,.65)}
+.image-box.broken img{display:none}
+
+</style>
+  <!-- Yandex.Metrika: сохранён исходный счётчик владельца -->
+  <script>
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();
+  for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
+  k=e.createElement(t);a=e.getElementsByTagName(t)[0];k.async=1;k.src=r;a.parentNode.insertBefore(k,a)
+  })(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=106963668','ym');
+  ym(106963668,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:'dataLayer',referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});
+  </script>
 </head>
 <body>
-<!-- ======= ПЛАВАЮЩЕЕ МЕНЮ ======= -->
-<style>
-  .top-menu {
-    position: sticky;
-    top: 0;
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(8px);
-    z-index: 1000;
-    padding: 6px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.03);
-  }
-  .menu-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 12px;
-    display: flex;
-    gap: 6px;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    align-items: center;
-    /* Лёгкий градиент справа — подсказка, что можно листать */
-    mask-image: linear-gradient(to right, black 90%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
-  }
-  .menu-container::-webkit-scrollbar {
-    display: none;
-  }
-  .menu-container a {
-    text-decoration: none;
-    color: #2c3e4f;
-    font-weight: 500;
-    font-size: 0.85rem;
-    padding: 5px 10px;
-    border-radius: 30px;
-    background: rgba(46, 125, 94, 0.04);
-    border: 1px solid rgba(46, 125, 94, 0.08);
-    transition: 0.15s;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    line-height: 1.2;
-    flex-shrink: 0;
-  }
-  .menu-container a:hover {
-    background: #2d6a4f;
-    color: white;
-  }
-  .menu-container a[href="#contact"] {
-    background: rgba(46, 125, 94, 0.1);
-    border-color: rgba(46, 125, 94, 0.2);
-  }
-</style>
-
-<div class="top-menu">
-  <div class="menu-container">
-    <a href="#about">👩 Обо мне</a>
-    <a href="#services">📋 Услуги</a>
-    <a href="#help">🌿 С чем помогаю</a>
-    <a href="#faq">❓ FAQ</a>
-    <a href="#contact">📞 Контакты</a>
-  </div>
-</div>
-<!-- ======= КОНЕЦ МЕНЮ ======= -->
-    
-<!-- ШАПКА (компактная, с красивыми кнопками) -->
-<section class="hero" style="padding: 30px 0; background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95)), url('images/bg-hero.jpg'); background-size: cover; background-position: center;">
-  <div class="container">
-    <!-- На компе текст и фото в ряд, на телефоне — под фото -->
-    <div style="display: flex; flex-direction: column; gap: 30px;">
-
-      <!-- ТЕКСТ (всегда сверху) -->
-      <div>
-        <div class="hero-badge" style="font-size: 0.9rem; margin-bottom: 10px;">
-          КЛИНИЧЕСКИЙ НУТРИЦИОЛОГ | ВРАЧ-ТЕРАПЕВТ
-        </div>
-        <h1 style="font-size: 2.2rem; margin-bottom: 15px;">Наталья <span>Чернова</span></h1>
-        
-        <p style="font-size: 1rem; margin-bottom: 15px; color: var(--text-muted);">
-          Вы сдавали анализы, но так и не поняли, что с ними делать?<br>
-          Устали от диет, вздутия и вечной усталости?
-        </p>
-
-        <!-- Список с галочками -->
-        <div style="margin-bottom: 15px;">
-          <div style="display: flex; align-items: center; gap: 8px; font-size: 1rem; margin-bottom: 5px;">
-            <span style="color: var(--primary);">✅</span> разбираю анализы
+  <noscript><div><img src="https://mc.yandex.ru/watch/106963668" alt="" style="position:absolute;left:-9999px"></div></noscript>
+  <a class="skip" href="#main">К содержимому</a>
+  
+  <header class="site-header">
+    <div class="wrap head-inner">
+      <a class="logo" href="#top" aria-label="Наталья Чернова — на главную">
+        <span class="logo-mark" aria-hidden="true">НЧ</span>
+        <span class="logo-copy"><strong>Наталья Чернова</strong><small>Врач · Нутрициолог</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Открыть меню">☰</button>
+      <nav class="nav" id="primary-nav" aria-label="Навигация по сайту">
+        <a href="#about">Обо мне</a><a href="#help">С чем помогу</a><a href="#services">Услуги и цены</a>
+        <a href="#process">Как работаю</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a>
+      </nav>
+      <a class="button head-cta" href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" rel="noopener noreferrer">Записаться <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Врач-терапевт · Клинический нутрициолог</div>
+          <h1>Лёгкость начинается <em>с заботы о себе.</em></h1>
+          <p class="hero-lead">Хотите чувствовать себя легче и увереннее? Помогу прийти к комфортному весу, наладить питание и разобраться в анализах. Без изнурительных диет — с вниманием к вам и опорой на медицинские знания.</p>
+          <div class="hero-ctas">
+            <a class="button" href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" rel="noopener noreferrer">Обсудить мою цель <span aria-hidden="true">↗</span></a>
+            <a class="button secondary" href="#services">Посмотреть услуги</a>
           </div>
-          <div style="display: flex; align-items: center; gap: 8px; font-size: 1rem; margin-bottom: 5px;">
-            <span style="color: var(--primary);">✅</span> нахожу дефициты
-          </div>
-          <div style="display: flex; align-items: center; gap: 8px; font-size: 1rem; margin-bottom: 5px;">
-            <span style="color: var(--primary);">✅</span> налаживаю ЖКТ
-          </div>
-          <div style="display: flex; align-items: center; gap: 8px; font-size: 1rem; margin-bottom: 5px;">
-            <span style="color: var(--primary);">✅</span> корректирую вес
-          </div>
-          <div style="display: flex; align-items: center; gap: 8px; font-size: 1rem; margin-bottom: 5px;">
-            <span style="color: var(--primary);">✅</span> подбираю БАДы без вреда
+          <div class="proof-line" aria-label="Опыт работы">
+            <div class="proof-item"><strong>10+ лет</strong><span>медицинской практики</span></div><div class="proof-sep" aria-hidden="true"></div>
+            <div class="proof-item"><strong>500+</strong><span>клиентов — по данным практики</span></div>
           </div>
         </div>
-
-        <p style="font-size: 1rem; margin-bottom: 20px;">
-          Индивидуальный план питания.<br>
-          С опорой на доказательную медицину.
-        </p>
-
-        <!-- КНОПКИ (компактные, с иконками) -->
-        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-          <a href="https://t.me/NataChYu" class="btn" style="
-              display: inline-flex;
-              align-items: center;
-              gap: 6px;
-              background: var(--primary);
-              color: white;
-              padding: 8px 16px;
-              border-radius: 40px;
-              font-size: 0.9rem;
-              font-weight: 600;
-              box-shadow: 0 4px 10px rgba(45, 106, 79, 0.2);
-          ">
-            ✍️ Записаться
-          </a>
-          <a href="https://t.me/Nata_nutrix" class="btn" style="
-              display: inline-flex;
-              align-items: center;
-              gap: 6px;
-              background: #27A7E7;
-              color: white;
-              padding: 8px 16px;
-              border-radius: 40px;
-              font-size: 0.9rem;
-              font-weight: 600;
-              box-shadow: 0 4px 10px rgba(39, 167, 231, 0.2);
-          ">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.97 9.273c-.146.658-.537.818-1.089.509l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.96-.99c-.643-.202-.655-.643.135-.953l11.56-4.456c.538-.196 1.01.129.832.941z"/>
-            </svg>
-            Telegram
-          </a>
+        <div class="hero-visual">
+          <div class="portrait-frame" id="portrait">
+            <div class="image-fallback" aria-hidden="true"><span>НЧ</span></div>
+            <img src="images/hero.jpg" width="700" height="860" alt="Наталья Чернова — врач-терапевт и нутрициолог" fetchpriority="high">
+          </div>
+          <div class="picture-note"><strong>Можно без строгих диет.</strong><span>Мягкие перемены. Понятный план. Забота.</span></div>
         </div>
-          <!-- КНОПКИ MAX В ШАПКЕ -->
-<a href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" class="btn" style="background: #E51917; display: inline-flex; align-items: center; gap: 6px;">
-    💬 Личное сообщение MAX
-</a>
-<a href="https://max.ru/id450400447149_biz" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 6px;">
-    📢 MAX-канал
-</a>
       </div>
-
-
-      <!-- ФОТО (под текстом) -->
-      <div style="text-align: center;">
-        <img src="images/hero.jpg" alt="Наталья Чернова" 
-             style="width: 100%; max-width: 300px; border-radius: 30px; box-shadow: var(--shadow); border: 4px solid white;">
+    </section>
+    <div class="trust-strip">
+      <div class="wrap trust-row">
+        <div><span class="trust-icon" aria-hidden="true">✧</span><span><strong>Высшее медицинское образование</strong><small>Клинический взгляд на питание и здоровье</small></span></div>
+        <div><span class="trust-icon" aria-hidden="true">✧</span><span><strong>Индивидуальный подход</strong><small>С учётом образа жизни, потребностей и анамнеза</small></span></div>
+        <div><span class="trust-icon" aria-hidden="true">✧</span><span><strong>Без лишних ограничений</strong><small>Реалистичные привычки вместо краткосрочных диет</small></span></div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Адаптация под компьютер: фото справа -->
-<style>
-  @media (min-width: 900px) {
-    .hero .container > div {
-      display: flex !important;
-      flex-direction: row !important;
-      align-items: center;
-      gap: 40px;
+    <section class="sec white-section" id="about" aria-labelledby="about-h">
+      <div class="wrap about-grid">
+        <div class="about-side"><div class="eyebrow">Давайте знакомиться</div><h2 class="section-title" id="about-h">Наука, опыт<br><em>и забота.</em></h2></div>
+        <div class="about-text">
+          <p>Я — Наталья Чернова, врач-терапевт и дипломированный нутрициолог с высшим медицинским образованием. Медицинская практика помогает мне смотреть на самочувствие комплексно, а не сводить всё к цифре на весах.</p>
+          <p>Вместе мы разбираемся в ваших целях, привычках и результатах обследований. Я помогаю выстроить питание с учётом предпочтений, режима дня и состояния здоровья — так, чтобы изменения было реально поддерживать.</p>
+          <div class="about-metrics"><div><b>10+</b><small>лет опыта</small></div><div><b>500+</b><small>клиентов</small></div></div>
+          
+          <a class="text-link" href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" rel="noopener noreferrer">Задать вопрос Наталье</a>
+        </div>
+      </div>
+    </section>
+    <section class="sec" id="help" aria-labelledby="help-h">
+      <div class="wrap">
+        <div class="section-intro"><div><div class="eyebrow">Направления работы</div><h2 id="help-h">С чем я могу помочь</h2></div>
+          <p>Не «волшебная таблетка», а понятный план, основанный на вашем запросе и реальной жизни.</p></div>
+        <div class="problems">
+          <article class="problem"><div class="image-box"><img loading="lazy" src="images/weight.jpg" alt="Полезная еда и работа над пищевыми привычками"></div><div class="problem-body"><div class="problem-num">01 / ЗАПРОС</div><h3>Комфортный вес</h3><p>Питание без голодовок, срывов и избыточных ограничений.</p></div></article>
+          <article class="problem"><div class="image-box"><img loading="lazy" src="images/energy.jpg" alt="Поддержание энергии и жизненного тонуса"></div><div class="problem-body"><div class="problem-num">02 / ЗАПРОС</div><h3>Энергия и тонус</h3><p>Разбор режима, рациона и возможных причин усталости.</p></div></article>
+          <article class="problem"><div class="image-box"><img loading="lazy" src="images/gut.jpg" alt="Забота о пищеварении"></div><div class="problem-body"><div class="problem-num">03 / ЗАПРОС</div><h3>Здоровье ЖКТ</h3><p>Индивидуальная коррекция питания при жалобах на пищеварение.</p></div></article>
+          <article class="problem"><div class="image-box"><img loading="lazy" src="images/vitamins.jpg" alt="Витамины и микроэлементы"></div><div class="problem-body"><div class="problem-num">04 / ЗАПРОС</div><h3>Дефициты и анализы</h3><p>Помощь в интерпретации результатов обследований и выборе дальнейших шагов.</p></div></article>
+        </div>
+      </div>
+    </section>
+    <section class="sec white-section" id="services" aria-labelledby="services-h">
+      <div class="wrap">
+        <div class="section-intro"><div><div class="eyebrow">Форматы работы</div><h2 id="services-h">Услуги и стоимость</h2></div>
+          <p>От первого шага до персонального сопровождения. Все детали обсудим до начала работы.</p></div>
+        <div class="prices-grid">
+          <article class="price-card"><div class="price-head"><h3>Экспресс-программа</h3></div><div class="price-amount">1 500 ₽</div>
+            <ul><li>Меню на 7 дней</li><li>Рецепты с фотографиями</li><li>Список покупок</li><li>Учёт ваших пищевых предпочтений</li></ul>
+            <a class="button secondary" href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" rel="noopener noreferrer">Узнать подробности ↗</a></article>
+          <article class="price-card"><div class="price-head"><h3>Консультация без анализов</h3></div><div class="price-amount">3 000 ₽</div>
+            <ul><li>Оценка питания и образа жизни</li><li>Индивидуальный план питания</li><li>Обсуждение нутрицевтиков при необходимости</li><li>Рекомендации по дальнейшим обследованиям</li></ul>
+            <a class="button secondary" href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" rel="noopener noreferrer">Записаться ↗</a></article>
+          <article class="price-card"><div class="price-head"><h3>Консультация с анализами</h3></div><div class="price-amount">5 000 ₽</div>
+            <ul><li>Разбор предоставленных результатов</li><li>Оценка возможных дефицитов</li><li>Рекомендации по питанию</li><li>Обсуждение добавок, дозировок и показаний</li></ul>
+            <a class="button secondary" href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" rel="noopener noreferrer">Записаться ↗</a></article>
+          <article class="price-card featured"><div class="price-head"><h3>Месяц сопровождения</h3><span class="price-badge">Расширенный формат</span></div><div class="price-amount">12 000 ₽</div>
+            <ul><li>Пошаговая стратегия питания</li><li>Индивидуальный рацион</li><li>Ежедневная поддержка в MAX</li><li>Корректировка плана</li><li>Разбор анализов</li></ul>
+            <a class="button" href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" rel="noopener noreferrer">Обсудить сопровождение ↗</a></article>
+        </div>
+        <p class="prices-note">Конкретные обследования и рекомендации определяются индивидуально. Описание услуг не заменяет медицинскую консультацию.</p>
+      </div>
+    </section>
+    <section class="sec" id="process" aria-labelledby="process-h">
+      <div class="wrap"><div class="section-intro"><div><div class="eyebrow">Шаг за шагом</div><h2 id="process-h">Как проходит работа</h2></div>
+        <p>Прозрачный процесс: вы понимаете, что будет дальше, ещё до первой встречи.</p></div>
+        <div class="steps">
+          <article class="step"><span class="step-number">01</span><h3>Знакомство</h3><p>Вы пишете мне и коротко рассказываете о своём запросе.</p></article>
+          <article class="step"><span class="step-number">02</span><h3>Сбор информации</h3><p>Заполняете анкету, при наличии присылаете результаты анализов.</p></article>
+          <article class="step"><span class="step-number">03</span><h3>Консультация</h3><p>На встрече обсуждаем ситуацию, вопросы и цели.</p></article>
+          <article class="step"><span class="step-number">04</span><h3>План питания</h3><p>Получаете персональные рекомендации, меню и практические материалы.</p></article>
+          <article class="step"><span class="step-number">05</span><h3>Поддержка</h3><p>При выбранном формате сопровождения — ответы на вопросы и корректировки.</p></article>
+          <article class="step"><span class="step-number">06</span><h3>Оценка результата</h3><p>Обсуждаем динамику и определяем следующие шаги.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="sec sage-section" id="rules" aria-labelledby="rules-h">
+      <div class="wrap rules-wrap">
+        <div><div class="eyebrow">Полезная памятка</div><h2 id="rules-h">10 принципов <em>осознанного питания</em></h2>
+          <p class="blurb">Небольшие шаги и последовательность зачастую важнее строгих диет. Откройте интересующий принцип — без перегруженной стены из десяти карточек.</p>
+          <a class="button secondary" href="https://max.ru/id450400447149_biz" target="_blank" rel="noopener noreferrer">Полезные материалы в MAX ↗</a></div>
+        <div class="rules-list">
+          <details class="rule"><summary>01. Разнообразие продуктов</summary><p>Чередуйте разные овощи, фрукты, крупы и источники белка. Так рацион проще сделать полноценным.</p></details>
+          <details class="rule"><summary>02. Цельнозерновые продукты</summary><p>Чаще выбирайте цельнозерновой хлеб и крупы, если они хорошо переносятся.</p></details>
+          <details class="rule"><summary>03. Источники белка</summary><p>Подбирайте белковые продукты в соответствии со своими потребностями, состоянием здоровья и предпочтениями.</p></details>
+          <details class="rule"><summary>04. Добавленный сахар</summary><p>Старайтесь ограничивать добавленный сахар и обращайте внимание на состав напитков и готовых продуктов.</p></details>
+          <details class="rule"><summary>05. Умеренность в соли</summary><p>Контролируйте общее количество соли в рационе, включая готовые продукты.</p></details>
+          <details class="rule"><summary>06. Достаточное количество жидкости</summary><p>Потребность в жидкости индивидуальна; вода, чай и другие напитки тоже учитываются в общем потреблении жидкости.</p></details>
+          <details class="rule"><summary>07. Удобный режим питания</summary><p>Выбирайте частоту приёмов пищи, которая подходит вашему графику, самочувствию и потребностям.</p></details>
+          <details class="rule"><summary>08. Меньше ультрапереработанных продуктов</summary><p>По возможности чаще готовьте из обычных продуктов, не превращая редкие исключения в чувство вины.</p></details>
+          <details class="rule"><summary>09. Полезные жиры</summary><p>Используйте разнообразные источники ненасыщенных жиров: орехи, рыбу, растительные масла.</p></details>
+          <details class="rule"><summary>10. Сон и восстановление</summary><p>Регулярный сон, движение и снижение стресса помогают поддерживать устойчивые привычки.</p></details>
+        </div>
+      </div>
+    </section>
+    <section class="sec white-section" id="articles" aria-labelledby="articles-h">
+      <div class="wrap"><div class="section-intro"><div><div class="eyebrow">Полезные материалы</div><h2 id="articles-h">Темы моего MAX-канала</h2></div>
+        <p>Материалы о питании, этикетках, витаминах и простых рецептах. Ссылки открывают общий MAX-канал, а не конкретную публикацию.</p></div>
+        <div class="articles">
+          <article class="article"><div class="image-box"><img loading="lazy" src="images/tg1.jpg" alt="Продукты для энергии"></div><div class="inner"><h3>5 продуктов для энергии</h3><p>Что действительно влияет на самочувствие.</p><a class="text-link" href="https://max.ru/id450400447149_biz" target="_blank" rel="noopener noreferrer">Открыть MAX ↗</a></div></article>
+          <article class="article"><div class="image-box"><img loading="lazy" src="images/tg2.jpg" alt="Этикетка продукта"></div><div class="inner"><h3>Как читать этикетки</h3><p>На что смотреть в составе продуктов.</p><a class="text-link" href="https://max.ru/id450400447149_biz" target="_blank" rel="noopener noreferrer">Открыть MAX ↗</a></div></article>
+          <article class="article"><div class="image-box"><img loading="lazy" src="images/tg3.jpg" alt="Витамин D"></div><div class="inner"><h3>Витамин D: разбор</h3><p>Факты и популярные заблуждения.</p><a class="text-link" href="https://max.ru/id450400447149_biz" target="_blank" rel="noopener noreferrer">Открыть MAX ↗</a></div></article>
+          <article class="article"><div class="image-box"><img loading="lazy" src="images/tg4.jpg" alt="Смузи-боул"></div><div class="inner"><h3>Завтрак за 5 минут</h3><p>Простой смузи-боул с рецептом.</p><a class="text-link" href="https://max.ru/id450400447149_biz" target="_blank" rel="noopener noreferrer">Открыть MAX ↗</a></div></article>
+        </div>
+      </div>
+    </section>
+    <section class="sec" id="faq" aria-labelledby="faq-h">
+      <div class="wrap"><div class="section-intro"><div><div class="eyebrow">Перед консультацией</div><h2 id="faq-h">Частые вопросы</h2></div></div>
+        <div class="faq-list">
+          <details class="faq"><summary>Нужно ли заранее сдавать анализы?</summary><p>Не обязательно. На первичной встрече мы можем обсудить питание и самочувствие, а необходимость дополнительных обследований определяется по ситуации.</p></details>
+          <details class="faq"><summary>Сколько длится консультация?</summary><p>Первичная консультация длится около 60 минут. Материалы после встречи обычно готовлю в течение 1–2 дней; подробности уточним при записи.</p></details>
+          <details class="faq"><summary>С какого возраста вы работаете?</summary><p>Я работаю с клиентами от 14 лет. Для несовершеннолетних условия консультации согласовываются с законными представителями.</p></details>
+          <details class="faq"><summary>Что входит в программу питания?</summary><p>Индивидуальные рекомендации, недельное меню, рецепты и список покупок с учётом предпочтений и ограничений.</p></details>
+        </div>
+      </div>
+    </section>
+    <section class="sec contact" id="contacts" aria-labelledby="contacts-h">
+      <div class="wrap contact-grid">
+        <div><div class="eyebrow">Начнём с разговора</div><h2 id="contacts-h">Забота о себе — хорошее начало.</h2>
+          <p class="contact-lead">Напишите, с какой задачей хотите разобраться. Я помогу выбрать подходящий формат консультации.</p>
+          <div class="contact-lines"><a href="tel:+79058210503">+7 (905) 821-05-03</a><a href="mailto:natashenka.chernova.86@mail.ru">Написать на почту</a></div>
+        </div>
+        <div class="contact-panel"><h3>Записаться онлайн</h3><p>Основная запись и общение — в MAX. При желании можно написать лично в Telegram.</p>
+          <a class="button" href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" rel="noopener noreferrer">Написать в MAX ↗</a>
+          <a class="button secondary" href="https://t.me/NataChYu" target="_blank" rel="noopener noreferrer">Личный Telegram ↗</a>
+          <a class="button secondary" href="tel:+79058210503">Позвонить</a>
+          <small>Статьи, рекомендации и обновления — в <a href="https://max.ru/id450400447149_biz" target="_blank" rel="noopener noreferrer">MAX-канале Натальи</a>.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-grid"><div><div class="brand">Наталья Чернова</div>
+      <p>Врач-терапевт, клинический нутрициолог. Материалы сайта носят информационный характер и не заменяют индивидуального медицинского обследования, диагностики или лечения.</p></div>
+      <div class="footer-links"><a href="#top">Наверх ↑</a><a href="https://max.ru/id450400447149_biz" target="_blank" rel="noopener noreferrer">MAX-канал</a><a href="#contacts">Связаться</a></div></div></footer>
+  <a class="mobile-cta" href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" rel="noopener noreferrer">Записаться на консультацию ↗</a>
+  <script>
+  (function(){
+    var menu=document.querySelector('.menu-toggle'),nav=document.querySelector('#primary-nav');
+    if(menu&&nav){
+      menu.addEventListener('click',function(){var open=nav.classList.toggle('is-open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');menu.textContent=open?'×':'☰';});
+      nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('is-open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';});});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape'){nav.classList.remove('is-open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';}});
     }
-    .hero .container > div > div:first-child {
-      flex: 1;
-    }
-    .hero .container > div > div:last-child {
-      flex: 0 0 320px;
-    }
-    .hero .btn {
-      padding: 10px 24px !important;
-      font-size: 1rem !important;
-    }
-  }
-</style>
-<!-- О СЕБЕ + КНОПКИ -->
-<section id="about" class="section" style="background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('images/bg-hero.jpg'); background-size: cover; background-position: center;">
-    <div class="container" style="text-align: center; max-width: 900px;">
-        <h2>Обо мне</h2>
-        <p style="font-size: 1.2rem;">Я — дипломированный врач-нутрициолог с высшим медицинским образованием. Первое образование — врач-терапевт, что даёт мне глубокое понимание работы организма и заболеваний.</p>
-        <p style="margin: 20px 0;">Помогаю людям мягко и без стресса прийти к здоровому весу, наладить пищеварение, восполнить дефициты. Составляю рационы с учётом ваших вкусов, образа жизни и диагнозов. Мой подход — баланс, наука и забота, а не жёсткие запреты.</p>
-        <div style="display: flex; justify-content: center; gap: 40px; margin: 30px 0; flex-wrap: wrap;">
-            <div><span style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">10+</span> лет стажа</div>
-            <div><span style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">500+</span> клиентов</div>
-        </div>
-        <a href="https://t.me/Nata_nutrix" class="btn">🔥 Полезные советы в Telegram</a>
-        <a href="https://t.me/NataChYu" class="btn btn-outline" style="margin-left: 10px;">✍️ Задать вопрос</a>
-    </div>
-    <!-- КНОПКИ MAX В РАЗДЕЛЕ "О СЕБЕ" -->
-<div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px;">
-    <a href="https://max.ru/id450400447149_biz" class="btn" style="background: #E51917; display: inline-flex; align-items: center; gap: 6px;">
-        📢 Полезные советы в MAX
-    </a>
-    <a href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 6px;">
-        ✍️ Задать вопрос в MAX
-    </a>
-</div>
-</section>
-
-<!-- С ЧЕМ ПОМОГАЮ + КАРТИНКИ -->
-<section id="help" class="section section-alt" style="background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('images/bg-hero.jpg'); background-size: cover; background-position: center;">
-    <div class="container">
-        <h2>С чем я помогаю</h2>
-        <div class="problems-grid">
-            <div class="problem-card">
-                <img src="images/weight.jpg" alt="Снижение веса">
-                <div class="problem-title">⚖️ Снижение веса</div>
-                <p>Худейте без голодовок и срывов. Рацион, который насыщает, а вес уходит. Учитываю метаболизм, гормоны и пищевые привычки.</p>
-                <a href="https://t.me/Nata_nutrix" class="btn-small btn-outline btn">Подробнее</a>
-            </div>
-            <div class="problem-card">
-                <img src="images/energy.jpg" alt="Энергия">
-                <div class="problem-title">⚡ Повышение энергии</div>
-                <p>Убрали усталость? Разбираем рацион, выявляем дефициты железа, магния, витаминов B. Возвращаю бодрость без кофе.</p>
-                <a href="https://t.me/Nata_nutrix" class="btn-small btn-outline btn">Подробнее</a>
-            </div>
-            <div class="problem-card">
-                <img src="images/gut.jpg" alt="ЖКТ">
-                <div class="problem-title">🫀 Здоровье ЖКТ</div>
-                <p>Вздутие, тяжесть, изжога? Налаживаю работу кишечника через питание. Работаю с гастритами, СРК, непереносимостью.</p>
-                <a href="https://t.me/Nata_nutrix" class="btn-small btn-outline btn">Подробнее</a>
-            </div>
-            <div class="problem-card">
-                <img src="images/vitamins.jpg" alt="Дефициты">
-                <div class="problem-title">🧪 Дефициты витаминов</div>
-                <p>По анализам или симптомам определяю нехватку железа, D, магния, цинка. Составляю план коррекции с нутрицевтиками.</p>
-                <a href="https://t.me/Nata_nutrix" class="btn-small btn-outline btn">Подробнее</a>
-            </div>
-        </div>
-        <div class="btn-center">
-            <a href="https://t.me/Nata_nutrix" class="btn">🎁 Ещё больше полезного в Telegram</a>
-        </div>
-    </div>
-</section>
-
-<!-- УСЛУГИ И ЦЕНЫ -->
-<section id="services" class="section">
-    <div class="container">
-        <h2>Услуги и цены</h2>
-        <div class="services-grid">
-
-            <!-- 1. Экспресс-программа -->
-            <div class="service-card">
-                <h3>🥗 Экспресс-программа</h3>
-                <div class="price">1 500 ₽</div>
-                <ul style="list-style: none; padding-left: 0; margin: 20px 0; text-align: left;">
-                    <li style="margin-bottom: 10px;">✅ Меню на 7 дней</li>
-                    <li style="margin-bottom: 10px;">✅ Рецепты с фото</li>
-                    <li style="margin-bottom: 10px;">✅ Список покупок</li>
-                    <li style="margin-bottom: 10px;">✅ Учёт ваших предпочтений</li>
-                </ul>
-                <a href="https://t.me/NataChYu" class="btn-small btn-outline btn">Записаться</a>
-            </div>
-
-            <!-- 2. Консультация (без анализов) -->
-            <div class="service-card">
-                <h3>📋 Консультация (без анализов)</h3>
-                <div class="price">3 000 ₽</div>
-                <ul style="list-style: none; padding-left: 0; margin: 20px 0; text-align: left;">
-                    <li style="margin-bottom: 10px;">✅ Оценка образа жизни</li>
-                    <li style="margin-bottom: 10px;">✅ План питания</li>
-                    <li style="margin-bottom: 10px;">✅ Рекомендации по БАД</li>
-                    <li style="margin-bottom: 10px;">✅ Направления на обследования</li>
-                </ul>
-                <a href="https://t.me/NataChYu" class="btn-small btn-outline btn">Записаться</a>
-            </div>
-
-            <!-- 3. Консультация + анализы -->
-            <div class="service-card">
-                <h3>🔬 Консультация + анализы</h3>
-                <div class="price">5 000 ₽</div>
-                <ul style="list-style: none; padding-left: 0; margin: 20px 0; text-align: left;">
-                    <li style="margin-bottom: 10px;">✅ Разбор всех анализов</li>
-                    <li style="margin-bottom: 10px;">✅ Выявление дефицитов</li>
-                    <li style="margin-bottom: 10px;">✅ Подбор нутрицевтиков</li>
-                    <li style="margin-bottom: 10px;">✅ Дозировки и схемы</li>
-                </ul>
-                <a href="https://t.me/NataChYu" class="btn-small btn-outline btn">Записаться</a>
-            </div>
-
-            <!-- 4. Месяц сопровождения (хит) -->
-            <div class="service-card" style="border: 2px solid var(--primary); background: #f4fcf8; position: relative;">
-                <span style="position: absolute; top: -10px; right: 20px; background: var(--primary); color: white; padding: 6px 16px; border-radius: 40px; font-size: 0.85rem; font-weight: 600; box-shadow: 0 4px 10px rgba(45,106,79,0.3);">🔥 Хит</span>
-                <h3>🤝 Месяц сопровождения</h3>
-                <div class="price">12 000 ₽</div>
-                <ul style="list-style: none; padding-left: 0; margin: 20px 0; text-align: left;">
-                    <li style="margin-bottom: 10px;">✅ Пошаговая стратегия питания с нутрицевтической поддержкой</li>
-                    <li style="margin-bottom: 10px;">✅ Индивидуальный рацион</li>
-                    <li style="margin-bottom: 10px;">✅ Ежедневная поддержка в Telegram</li>
-                    <li style="margin-bottom: 10px;">✅ Корректировка плана</li>
-                    <li style="margin-bottom: 10px;">✅ Разбор анализов</li>
-                </ul>
-                <a href="https://t.me/NataChYu" class="btn" style="background: var(--primary-dark);">Записаться</a>
-            </div>
-
-        </div>
-        <div class="btn-center">
-            <a href="https://t.me/Nata_nutrix" class="btn">💰 Акции и скидки в Telegram-канале</a>
-        </div>
-    </div>
-</section>
-
-<!-- 10 ЗОЛОТЫХ ПРАВИЛ -->
-<section id="parallax-section" class="section rules-section" style="background: linear-gradient(rgba(254,252,245,0.9), rgba(254,252,245,0.9)), url('images/rules-bg.jpg'); background-size: cover; background-attachment: fixed;">
-    <div class="container">
-        <h2>🥗 10 золотых правил питания</h2>
-        <div class="rules-grid">
-            <div class="rule-item"><span class="rule-title">🍎 Разнообразие</span> Чем больше разных продуктов, тем богаче микробиом и набор витаминов.</div>
-            <div class="rule-item"><span class="rule-title">🌾 Цельнозерновые</span> Замените белый хлеб и макароны на цельнозерновые — клетчатка и энергия.</div>
-            <div class="rule-item"><span class="rule-title">🍗 Белок в каждый приём</span> Рыба, птица, яйца, бобовые — основа сытости и мышц.</div>
-            <div class="rule-item"><span class="rule-title">🍬 Сахар ≤50 г</span> Это 10 ч.л. Сахар прячется в соусах и йогуртах — читайте этикетки.</div>
-            <div class="rule-item"><span class="rule-title">🧂 Соль 1 ч.л.</span> Не больше 5 г в день. Избыток задерживает воду и повышает давление.</div>
-            <div class="rule-item"><span class="rule-title">💧 Вода 30 мл/кг</span> При весе 60 кг — 1,8 л. Чай и кофе не считаются.</div>
-            <div class="rule-item"><span class="rule-title">⏰ Режим 3+2</span> Три приёма + два перекуса. Нет голоду и скачкам сахара.</div>
-            <div class="rule-item"><span class="rule-title">🍟 Нет фастфуду</span> Трансжиры и сахар разрушают здоровье. Готовьте сами.</div>
-            <div class="rule-item"><span class="rule-title">🥑 Полезные жиры</span> Авокадо, оливковое масло, орехи, рыба — нужны для гормонов.</div>
-            <div class="rule-item"><span class="rule-title">😴 Сон 7-9 ч</span> Недосып повышает тягу к сладкому и срывает диету.</div>
-        </div>
-        <div class="btn-center">
-            <a href="https://t.me/Nata_nutrix/397" class="btn">📥 Скачать гайд с рецептами</a>
-        </div>
-    </div>
-</section>
-
-<!-- КАК ПРОХОДИТ КОНСУЛЬТАЦИЯ -->
-<section class="section section-alt">
-    <div class="container">
-        <h2>Как проходит консультация</h2>
-        <div class="steps-grid">
-            <div class="step-card">
-                <img src="images/consult1.jpg" alt="Заявка">
-                <h3>1. Заявка</h3>
-                <p>Вы пишете в Telegram, рассказываете о запросе. Я высылаю подробный опросник.</p>
-            </div>
-            <div class="step-card">
-                <img src="images/consult2.jpg" alt="Сбор данных">
-                <h3>2. Сбор данных</h3>
-                <p>Заполняете опросник, присылаете анализы. Я изучаю всё 1-2 дня.</p>
-            </div>
-            <div class="step-card">
-                <img src="images/consult3.jpg" alt="Консультация">
-                <h3>3. Консультация</h3>
-                <p>Созваниваемся на 60 мин. Объясняю результаты, даю рекомендации.</p>
-            </div>
-            <div class="step-card">
-                <img src="images/consult4.jpg" alt="Программа">
-                <h3>4. Программа питания</h3>
-                <p>Составляю меню на неделю, рецепты, список покупок.</p>
-            </div>
-            <div class="step-card">
-                <img src="images/consult5.jpg" alt="Поддержка">
-                <h3>5. Пост-поддержка</h3>
-                <p>Отвечаю на вопросы в Telegram, корректирую программу.</p>
-            </div>
-            <div class="step-card">
-                <img src="images/consult6.jpg" alt="Контроль">
-                <h3>6. Повторная встреча</h3>
-                <p>Через 2-4 недели оцениваем прогресс, меняем план при необходимости.</p>
-            </div>
-        </div>
-        <div class="btn-center">
-            <a href="https://t.me/NataChYu" class="btn">✍️ Записаться на консультацию</a>
-            <a href="https://t.me/Nata_nutrix" class="btn btn-outline">📢 Больше примеров в канале</a>
-        </div>
-    </div>
-</section>
-
-<!-- ПОЛЕЗНОЕ ИЗ TELEGRAM -->
-<section class="section section-alt" style="background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('images/bg-hero.jpg'); background-size: cover; background-position: center;">
-    <div class="container">
-        <h2>📌 Полезное из Telegram</h2>
-        <div class="telegram-grid">
-            <div class="telegram-card">
-                <img src="images/tg1.jpg" alt="Продукты для энергии">
-                <h3>🥑 5 продуктов для энергии</h3>
-                <p>Что реально бодрит, а что создаёт иллюзию. Полный разбор.</p>
-                <a href="https://t.me/Nata_nutrix/415" class="btn-small btn-outline btn">Читать</a>
-            </div>
-            <div class="telegram-card">
-                <img src="images/tg2.jpg" alt="Этикетки">
-                <h3>🔍 Как читать этикетки</h3>
-                <p>Скрытый сахар, трансжиры, Е-добавки — на что смотреть.</p>
-                <a href="https://t.me/Nata_nutrix/418" class="btn-small btn-outline btn">Читать</a>
-            </div>
-            <div class="telegram-card">
-                <img src="images/tg3.jpg" alt="Витамин D">
-                <h3>💊 Витамин D: разбор</h3>
-                <p>Кому, сколько и как принимать. Мифы и факты.</p>
-                <a href="https://t.me/Nata_nutrix" class="btn-small btn-outline btn">Читать</a>
-            </div>
-            <div class="telegram-card">
-                <img src="images/tg4.jpg" alt="Смузи">
-                <h3>🥣 Рецепт смузи боул</h3>
-                <p>Идеальный завтрак за 5 минут. Пошагово и с пользой.</p>
-                <a href="https://t.me/Nata_nutrix" class="btn-small btn-outline btn">Читать</a>
-            </div>
-        </div>
-        <div class="btn-center">
-            <a href="https://t.me/Nata_nutrix" class="btn">📢 Подписаться на канал</a>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="section section-alt">
-    <div class="container">
-        <h2>Часто задаваемые вопросы</h2>
-        <div class="faq-grid">
-            <div class="faq-item">
-                <div class="faq-question">Нужно ли сдавать анализы перед консультацией?</div>
-                <p>Желательно, но не обязательно. С анализами рекомендации точнее, особенно по нутрицевтикам. Без анализов составляем программу на основе опросника.</p>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Как долго длится консультация и когда я получу программу?</div>
-                <p>Первичная — 60 минут, повторная — 45, вопрос-ответ — 30-45 мин. Программа высылается в течение 1-2 дней после консультации.</p>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Работаете ли вы с детьми?</div>
-                <p>Я работаю с клиентами от 14 лет и старше.</p>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Что входит в программу питания?</div>
-                <p>Расчёт калорий, меню на неделю (завтрак, обед, ужин, 2 перекуса), рецепты, список покупок. С учётом ваших предпочтений и непереносимостей.</p>
-            </div>
-        </div>
-        <div class="btn-center">
-            <a href="https://t.me/NataChYu" class="btn">❓ Задать свой вопрос</a>
-        </div>
-    </div>
-</section>
-
-<!-- КОНТАКТЫ -->
-<section id="contact" class="section">
-    <div class="container contact-flex">
-        <div>
-            <h2>Свяжитесь со мной</h2>
-            <div class="social-links">
-                <a href="https://max.ru/id450400447149_biz" target="_blank" style="display: inline-flex; align-items: center; gap: 8px;">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="#E51917">
-        <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2z"/>
-    </svg>
-    MAX-канал
-</a>
-                <a href="tel:+79058210503" style="color: var(--text-muted); text-decoration: none; font-weight: 500;">📞 +7 (905) 821-05-03</a>
-                <a href="https://t.me/Nata_nutrix">📢 Telegram-канал</a>
-                <a href="https://t.me/NataChYu">💬 Написать лично</a>
-                <a href="mailto:natashenka.chernova.86@mail.ru">📧 Email</a>
-            </div>
-        </div>
-        <div style="background: var(--primary); color: white; border-radius: 40px; padding: 30px; max-width: 320px;">
-            <p style="font-size: 1.8rem; font-weight: 800;">Запись онлайн</p>
-            <p style="margin: 10px 0;">Наталья Чернова</p>
-            <p>⏱️ Отвечаю в течение дня</p>
-            <a href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" class="btn btn-outline" style="border-color: white; color: white; margin-top: 15px; display: block; text-align: center;">
-    💬 Написать в MAX
-</a>
-            <a href="https://t.me/NataChYu" class="btn" style="background: white; color: var(--primary); margin: 15px 0 10px; display: block;">Написать в Telegram</a>
-            <a href="https://t.me/Nata_nutrix" class="btn btn-outline" style="border-color: white; color: white; display: block;">📢 Подписаться на канал</a>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div class="container">
-        <p>© Информация на сайте носит ознакомительный характер и не является медицинской консультацией. Для постановки диагноза обратитесь к лечащему врачу</p>
-    </div>
-</footer>
-<!-- ЛИПКАЯ КНОПКА TELEGRAM (правильный цвет) -->
-<style>
-  .telegram-sticky {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    background: #27A7E7;  /* Фирменный голубой Telegram */
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 20px rgba(39, 167, 231, 0.4);
-    z-index: 9999;
-    transition: 0.2s;
-    border: 2px solid white;
-    text-decoration: none;
-  }
-  .telegram-sticky:hover {
-    background: #1f8bcb;  /* Чуть темнее при наведении */
-    transform: scale(1.1);
-    box-shadow: 0 12px 28px rgba(39, 167, 231, 0.5);
-  }
-  .telegram-sticky svg {
-    width: 32px;
-    height: 32px;
-    fill: white;
-  }
-  /* На телефонах чуть меньше */
-  @media (max-width: 600px) {
-    .telegram-sticky {
-      width: 50px;
-      height: 50px;
-      bottom: 16px;
-      right: 16px;
-    }
-    .telegram-sticky svg {
-      width: 28px;
-      height: 28px;
-    }
-  }
-</style>
-
-<a href="https://t.me/Nata_nutrix" target="_blank" class="telegram-sticky" aria-label="Telegram-канал">
-  <svg viewBox="0 0 24 24">
-    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.97 9.273c-.146.658-.537.818-1.089.509l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.96-.99c-.643-.202-.655-.643.135-.953l11.56-4.456c.538-.196 1.01.129.832.941z"/>
-  </svg>
-</a>
-<!-- МИНИМАЛЬНЫЙ, НО ЗАМЕТНЫЙ НАБОР -->
-<style>
-  /* Появление блоков при скролле — заметное */
-  .fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-  .fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Лёгкий tap-эффект для кнопок (работает на телефоне) */
-  .btn, .btn-outline {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    -webkit-tap-highlight-color: transparent;
-  }
-  .btn:active, .btn-outline:active {
-    transform: scale(0.97);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-
-  /* Плавный скролл */
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
-
-<script>
-  // Запускаем появление блоков
-  document.addEventListener('DOMContentLoaded', function() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll('.section:not(.hero)').forEach(section => {
-      section.classList.add('fade-up');
-      observer.observe(section);
-    });
-  });
-</script>
-    <style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
-
-   <!-- ЛИПКАЯ КНОПКА ЗВОНКА (над Telegram) -->
-<style>
-  .call-sticky {
-    position: fixed;
-    bottom: 100px;  /* ровно над Telegram */
-    right: 24px;
-    background: var(--primary);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 20px rgba(45, 106, 79, 0.4);
-    z-index: 9999;
-    transition: 0.2s;
-    border: 2px solid white;
-    text-decoration: none;
-  }
-  .call-sticky:hover {
-    background: var(--primary-dark);
-    transform: scale(1.1);
-  }
-  .call-sticky svg {
-    width: 28px;
-    height: 28px;
-    fill: white;
-  }
-  /* На телефонах */
-  @media (max-width: 600px) {
-    .call-sticky {
-      width: 50px;
-      height: 50px;
-      bottom: 90px;
-      right: 16px;
-    }
-  }
-</style>
-
-<a href="tel:+79058210503" class="call-sticky" aria-label="Позвонить">
-  <svg viewBox="0 0 24 24">
-    <path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.5-6.5l2.2-2.2c.2-.2.3-.6.2-1-.3-1.1-.5-2.3-.5-3.6 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z"/>
-  </svg>
-</a>
-<!-- ЛИПКАЯ КНОПКА MAX (личный профиль) -->
-<style>
-  .max-sticky {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    background: #E51917;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 20px rgba(229, 25, 23, 0.4);
-    z-index: 9999;
-    transition: 0.2s;
-    border: 2px solid white;
-    text-decoration: none;
-  }
-  .max-sticky:hover {
-    background: #c41a18;
-    transform: scale(1.1);
-  }
-  .max-sticky svg {
-    width: 32px;
-    height: 32px;
-    fill: white;
-  }
-  @media (max-width: 600px) {
-    .max-sticky {
-      width: 50px;
-      height: 50px;
-      bottom: 16px;
-      right: 16px;
-    }
-  }
-</style>
-
-<a href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" class="max-sticky" aria-label="MAX">
-  <svg viewBox="0 0 24 24">
-    <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2z"/>
-  </svg>
-</a>    
+    document.querySelectorAll('.image-box img').forEach(function(img){function fail(){img.closest('.image-box').classList.add('broken');}img.addEventListener('error',fail);if(img.complete&&img.naturalWidth===0)fail();});
+    var portrait=document.querySelector('#portrait'),photo=portrait&&portrait.querySelector('img');
+    if(photo){photo.addEventListener('error',function(){portrait.classList.add('has-error');});if(photo.complete&&photo.naturalWidth===0){portrait.classList.add('has-error');}}
+  })();
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
