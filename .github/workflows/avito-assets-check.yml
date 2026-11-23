@@ -1,0 +1,32 @@
+name: Avito public feed and images — anonymous HTTP check
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/avito-assets-check.yml']
+permissions:
+  contents: read
+jobs:
+  verify-public-links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ensure all 10 photo URLs and XLSX are accessible anonymously
+        shell: bash
+        run: |
+          set -euo pipefail
+          base='https://raw.githubusercontent.com/cheloveck4-netizen/cheloveck4-netizen.github.io/main/avito-assets/2026-11-24'
+          test_files=(avito-assets/2026-11-24/*.jpg avito-assets/2026-11-24/natalya-new-127.xlsx)
+          [ "${#test_files[@]}" -eq 11 ]
+          for path in "${test_files[@]}"; do
+            name="${path##*/}"
+            curl --fail --location --silent --show-error --retry 2 --max-time 30 "$base/$name" -o /tmp/avito-check.bin
+            mime="$(file --mime-type -b /tmp/avito-check.bin)"
+            size="$(wc -c < /tmp/avito-check.bin)"
+            case "$name" in
+              *.jpg) test "$mime" = 'image/jpeg' && test "$size" -gt 30000 ;;
+              *.xlsx) test "$mime" = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' && test "$size" -gt 5000 ;;
+            esac
+            echo "PUBLIC_LINK_OK: $name mime=$mime size=$size"
+          done
