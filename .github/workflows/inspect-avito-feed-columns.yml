@@ -1,0 +1,43 @@
+name: Avito - inspect public 127 XLSX structure (read-only)
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/inspect-avito-feed-columns.yml']
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Read public XLSX metadata without editing it
+        shell: bash
+        run: |
+          python - <<'PY'
+          from urllib.request import urlopen
+          import zipfile,io,xml.etree.ElementTree as E,re,collections
+          url='https://raw.githubusercontent.com/cheloveck4-netizen/cheloveck4-netizen.github.io/main/avito-assets/2026-11-24/natalya-new-127.xlsx'
+          data=urlopen(url,timeout=30).read()
+          ns={'m':'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
+          with zipfile.ZipFile(io.BytesIO(data)) as z:
+              ss=[]
+              if 'xl/sharedStrings.xml' in z.namelist():
+                  node=E.fromstring(z.read('xl/sharedStrings.xml'))
+                  ss=[''.join(y.text or '' for y in si.iter('{%s}t'%ns['m'])) for si in node]
+              doc=E.fromstring(z.read('xl/worksheets/sheet1.xml'))
+              rows=doc.find('m:sheetData',ns)
+              colnames={}
+              for row in list(rows)[:9]:
+                  values=[]
+                  for c in row.findall('m:c',ns):
+                      n=c.attrib.get('r')
+                      v=c.find('m:v',ns)
+                      inline=c.find('m:is',ns)
+                      raw=(v.text or '') if v is not None else ''.join(t.text or '' for t in inline.iter('{%s}t'%ns['m'])) if inline is not None else ''
+                      if c.attrib.get('t')=='s' and raw:
+                          raw=ss[int(raw)]
+                      col=re.sub(r'\d','',n)
+                      values.append((col,raw[:85]))
+                  print('ROW',row.attrib.get('r'),values)
+              print('WORKSHEETS',z.namelist().count('xl/worksheets/sheet1.xml'),'BYTES',len(data))
+          PY
