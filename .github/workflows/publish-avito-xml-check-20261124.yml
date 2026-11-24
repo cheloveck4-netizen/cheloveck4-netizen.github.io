@@ -1,0 +1,99 @@
+name: "Publish Avito 250-row XML for manual validation only"
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-avito-xml-check-20261124.yml
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Convert current 250-row XLSX to check-only XML and verify (NO Avito API)
+        shell: bash
+        run: |
+          python - <<'PY'
+          import zipfile, xml.etree.ElementTree as ET, re
+          from pathlib import Path
+
+          base=Path('avito-assets/2026-11-24')
+          src=base/'natalya-unified-250.xlsx'
+          output=base/'natalya-check-only-250.xml'
+          ns='{http://schemas.openxmlformats.org/spreadsheetml/2006/main}'
+          with zipfile.ZipFile(src) as z:
+              shared=[]
+              if 'xl/sharedStrings.xml' in z.namelist():
+                  r=ET.fromstring(z.read('xl/sharedStrings.xml'))
+                  shared=[''.join(t.text or '' for t in x.iter(ns+'t')) for x in r]
+              sheet=ET.fromstring(z.read('xl/worksheets/sheet3.xml'))
+              raw=[]
+              for row in sheet.findall(ns+'sheetData/'+ns+'row'):
+                  if int(row.get('r','0'))<5:continue
+                  cells={}
+                  for c in row.findall(ns+'c'):
+                      col=re.sub(r'\d','',c.get('r',''))
+                      v=c.find(ns+'v')
+                      inline=c.find(ns+'is')
+                      val=(v.text or '') if v is not None else (''.join(t.text or '' for t in inline.iter(ns+'t')) if inline is not None else '')
+                      if c.get('t')=='s' and val:val=shared[int(val)]
+                      cells[col]=val
+                  if cells.get('A'):raw.append(cells)
+          assert len(raw)==250,('wrong row count',len(raw))
+          root=ET.Element('Ads',formatVersion='3',target='Avito.ru')
+          old=new=0
+          for row in raw:
+              ad=ET.SubElement(root,'Ad')
+              def field(k,v):
+                  if v:
+                      ET.SubElement(ad,k).text=str(v)
+              field('Id',row.get('A'))
+              if row.get('C'):
+                  old+=1;field('AvitoId',row['C'])
+              else:
+                  new+=1;field('ListingFee',row.get('B'))
+              field('Category','Предложение услуг')
+              for name,col in [('ServiceType','N'),('ServiceSubtype','O'),('Title','M'),('Description','L'),
+                               ('Price','J'),('Address','K'),('ManagerName','D'),('ContactPhone','E'),
+                               ('ContactMethod','H'),('Place','P'),('SpecialistGender','Q'),
+                               ('WorkExperience','R'),('EMail','T'),('CompanyName','V')]:
+                  field(name,row.get(col,''))
+              imgs=[u.strip() for u in row.get('F','').split('|') if u.strip()]
+              assert len(imgs)==10,('bad image count',row.get('A'),len(imgs))
+              section=ET.SubElement(ad,'Images')
+              for u in imgs:
+                  assert u.startswith('https://raw.githubusercontent.com/')
+                  ET.SubElement(section,'Image',url=u)
+              price_rows=[x.strip() for x in row.get('S','').splitlines() if x.strip()]
+              assert len(price_rows)==5,('bad price list',row.get('A'))
+              section=ET.SubElement(ad,'PriceList')
+              for line in price_rows:
+                  parts=line.split('|')
+                  assert len(parts)==5,('bad service row',row.get('A'))
+                  elem=ET.SubElement(section,'Service')
+                  for key,value in zip(('ServiceName','ServiceTitle','ServicePrice','_unused','ServicePriceType'),parts):
+                      if key!='_unused' and value:ET.SubElement(elem,key).text=value
+          ids=[a.findtext('Id') for a in root]
+          assert old==127 and new==123 and len(set(ids))==250
+          tree=ET.ElementTree(root)
+          ET.indent(tree,space='  ')
+          tree.write(output,encoding='utf-8',xml_declaration=True)
+          check=ET.parse(output).getroot()
+          assert len(check)==250
+          print('CHECK_ONLY_XML_CREATED: ',len(check),'ads; ',old,'old, ',new,'new; bytes',output.stat().st_size)
+          PY
+      - name: Commit public XML check-only file (NO account write, NO auto-upload)
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add avito-assets/2026-11-24/natalya-check-only-250.xml
+          git diff --cached --quiet && exit 0
+          git commit -m 'assets(avito): publish 250-row XML for validator only'
+          git push origin HEAD:main
