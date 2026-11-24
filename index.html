@@ -371,6 +371,44 @@ footer .footer-links a{color:#f5e1e5}
 @media(prefers-reduced-motion:reduce){.hero-visual,.button,.problem,.article,.price-card{animation:none!important}}
 
 
+/* Clear 3000 + 12000 consultation credit — restrained extension of current design. */
+.price-credit-hint{margin:0 0 20px;padding:13px 15px;background:#fff0ed;border:1px solid #f0d8d4;border-radius:12px;color:#795264;font-size:13px;line-height:1.65}
+.price-credit-hint strong{color:#754050}
+.price-card--month{grid-column:1/-1;min-height:0}
+.price-card--month .price-head{align-items:center;margin-bottom:22px}
+.price-card--month .price-amount{display:flex;align-items:baseline;flex-wrap:wrap;column-gap:16px;row-gap:8px;margin-bottom:23px;font-size:clamp(38px,4vw,53px)}
+.price-card--month .price-period{font:600 12px/1.6 var(--sans);color:#f4d8de}
+.month-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(26px,4vw,64px);align-items:start}
+.month-credit-flow{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:stretch}
+.month-credit-step{min-width:0;padding:17px 16px;border:1px solid rgba(255,242,238,.28);border-radius:14px;background:rgba(255,248,246,.1);display:flex;flex-direction:column;gap:5px}
+.month-credit-step--balance{background:#fff0e7;color:#66394a;border-color:#fff0e7}
+.month-credit-label{font-weight:750;font-size:11px;line-height:1.35;letter-spacing:.02em}
+.month-credit-step strong{font:500 clamp(26px,3vw,36px)/1.12 var(--serif);letter-spacing:-.035em;white-space:nowrap}
+.month-credit-step small{font-size:11px;line-height:1.4;opacity:.86}
+.month-credit-plus{display:grid;place-items:center;align-self:center;font-size:24px;color:#f6d5d9}
+.month-credit-explain{margin:18px 0 0;color:#f6e5e6;font-size:13px;line-height:1.8}
+.month-credit-explain strong{color:#fff7ee}
+.month-details{display:flex;flex-direction:column;align-self:stretch;padding:10px 0 0}
+.price-card--month .month-details ul{flex:0 0 auto;margin-bottom:22px}
+.price-card--month .month-details li{font-size:14px;line-height:1.65;padding-top:8px;padding-bottom:8px}
+.price-card--month .month-details .button{margin-top:auto;text-align:center}
+@media(max-width:740px){
+  .price-card--month{grid-column:auto}
+  .month-layout{grid-template-columns:minmax(0,1fr);gap:14px}
+  .month-credit-flow{gap:7px}
+  .month-credit-step{padding:14px 12px}
+  .month-credit-step strong{font-size:clamp(22px,6.5vw,31px)}
+  .month-credit-label{font-size:10px}
+  .month-credit-step small{font-size:10px}
+  .month-credit-plus{font-size:19px}
+  .month-details{padding:0}
+}
+@media(max-width:370px){
+  .month-credit-flow{grid-template-columns:minmax(0,1fr);gap:5px}
+  .month-credit-plus{transform:rotate(90deg);font-size:18px}
+  .month-credit-step{padding:12px 14px}
+}
+
 /* Image failure doesn't display the browser's broken image glyph. */
 .image-box.broken{background:
   radial-gradient(circle at 75% 25%,rgba(255,247,236,.8),transparent 42%),
@@ -472,15 +510,34 @@ footer .footer-links a{color:#f5e1e5}
           <article class="price-card"><div class="price-head"><h3>Экспресс-программа</h3></div><div class="price-amount">1 500 ₽</div>
             <ul><li>Меню на 7 дней</li><li>Рецепты с фотографиями</li><li>Список покупок</li><li>Учёт ваших пищевых предпочтений</li></ul>
             <a class="button secondary" href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" rel="noopener noreferrer">Узнать подробности ↗</a></article>
-          <article class="price-card"><div class="price-head"><h3>Консультация без анализов</h3></div><div class="price-amount">3 000 ₽</div>
+          <article class="price-card price-card--initial"><div class="price-head"><h3>Первичная консультация</h3><span class="price-badge">Без разбора анализов</span></div><div class="price-amount">3 000 ₽</div>
             <ul><li>Оценка питания и образа жизни</li><li>Индивидуальный план питания</li><li>Обсуждение нутрицевтиков при необходимости</li><li>Рекомендации по дальнейшим обследованиям</li></ul>
+            <p class="price-credit-hint">Если после консультации выберете сопровождение на месяц, <strong>3 000 ₽ полностью зачтём в его стоимость.</strong></p>
             <a class="button secondary" href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" rel="noopener noreferrer">Записаться ↗</a></article>
           <article class="price-card"><div class="price-head"><h3>Консультация с анализами</h3></div><div class="price-amount">5 000 ₽</div>
             <ul><li>Разбор предоставленных результатов</li><li>Оценка возможных дефицитов</li><li>Рекомендации по питанию</li><li>Обсуждение добавок, дозировок и показаний</li></ul>
             <a class="button secondary" href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" rel="noopener noreferrer">Записаться ↗</a></article>
-          <article class="price-card featured"><div class="price-head"><h3>Месяц сопровождения</h3><span class="price-badge">Расширенный формат</span></div><div class="price-amount">12 000 ₽</div>
-            <ul><li>Пошаговая стратегия питания</li><li>Индивидуальный рацион</li><li>Ежедневная поддержка в MAX</li><li>Корректировка плана</li><li>Разбор анализов</li></ul>
-            <a class="button" href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" rel="noopener noreferrer">Обсудить сопровождение ↗</a></article>
+          <article class="price-card"><div class="price-head"><h3>Повторная консультация</h3><span class="price-badge">После первичной</span></div><div class="price-amount">2 500 ₽</div>
+            <ul><li>Обсуждение динамики и результатов</li><li>Ответы на вопросы по рекомендациям</li><li>Корректировка питания при необходимости</li><li>Дальнейшие шаги с учётом целей</li></ul>
+            <a class="button secondary" href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" rel="noopener noreferrer">Записаться ↗</a></article>
+          <article class="price-card featured price-card--month">
+            <div class="price-head"><h3>Сопровождение на месяц</h3><span class="price-badge">Первичная консультация — в зачёт</span></div>
+            <div class="month-layout">
+              <div class="month-offer">
+                <div class="price-amount">15 000 ₽ <span class="price-period">полная стоимость за месяц</span></div>
+                <div class="month-credit-flow" aria-label="Первичная консультация 3000 рублей засчитывается, доплата при переходе на сопровождение 12000 рублей, общая стоимость 15000 рублей">
+                  <div class="month-credit-step"><span class="month-credit-label">Первичная консультация</span><strong>3 000 ₽</strong><small>Засчитывается в стоимость</small></div>
+                  <span class="month-credit-plus" aria-hidden="true">+</span>
+                  <div class="month-credit-step month-credit-step--balance"><span class="month-credit-label">Доплата при переходе</span><strong>12 000 ₽</strong><small>Итого за месяц — 15 000 ₽</small></div>
+                </div>
+                <p class="month-credit-explain">Если после первичной консультации за 3 000 ₽ решите продолжить работу, <strong>повторно платить за неё не нужно</strong>: доплата за месячное сопровождение составит 12 000 ₽.</p>
+              </div>
+              <div class="month-details">
+                <ul><li>Пошаговая стратегия питания</li><li>Индивидуальный рацион</li><li>Ежедневная поддержка в MAX</li><li>Корректировка плана</li><li>Разбор анализов</li></ul>
+                <a class="button" href="https://max.ru/u/f9LHodD0cOJTqGSp32CJ3hBz0T4Mp2WoPpSxeXkKoIkP9y5xD8UUwwXBqEE" target="_blank" rel="noopener noreferrer">Обсудить сопровождение ↗</a>
+              </div>
+            </div>
+          </article>
         </div>
         <p class="prices-note">Конкретные обследования и рекомендации определяются индивидуально. Описание услуг не заменяет медицинскую консультацию.</p>
       </div>
