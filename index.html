@@ -409,6 +409,39 @@ footer .footer-links a{color:#f5e1e5}
   .month-credit-step{padding:12px 14px}
 }
 
+/* Hero photo breathing room: the caption is BELOW the portrait, never on Natalia. */
+.hero-visual{display:flex;flex-direction:column;align-items:stretch;gap:17px;padding:24px 21px 0 0}
+.hero-visual .portrait-frame{width:100%;flex:none;isolation:isolate}
+.hero-visual .portrait-frame img{object-position:center 27%}
+.hero-visual .picture-note{
+  position:relative;left:auto;right:auto;bottom:auto;top:auto;z-index:3;
+  margin:0 0 0 22px;max-width:none;width:calc(100% - 22px);
+  padding:16px 22px;border-radius:15px;
+  border:1px solid #edcdd0;
+  background:linear-gradient(115deg,rgba(255,252,247,.98),rgba(255,241,238,.96));
+  box-shadow:0 10px 27px rgba(114,57,82,.08);
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.hero-visual .picture-note strong{
+  font:500 clamp(18px,2.2vw,24px)/1.28 var(--serif);
+  margin:0;color:#714052;max-width:none;flex:0 1 43%;
+}
+.hero-visual .picture-note span{
+  display:block;color:#956d78;font-size:12px;line-height:1.6;
+  font-weight:600;flex:0 1 57%;
+}
+.hero-visual .picture-note::before{right:9px;top:3px;font-size:20px}
+@media(max-width:740px){
+  .hero-visual{padding:14px 13px 0 0;gap:14px}
+  .hero-visual .picture-note{margin:0 0 0 10px;width:calc(100% - 10px);padding:15px 17px;gap:12px}
+  .hero-visual .picture-note strong{font-size:clamp(19px,5.3vw,25px);flex:1 1 auto}
+  .hero-visual .picture-note span{font-size:11px;flex:1 1 auto}
+}
+@media(max-width:390px){
+  .hero-visual .picture-note{display:block}
+  .hero-visual .picture-note strong{display:block;margin-bottom:5px}
+}
+
 /* Image failure doesn't display the browser's broken image glyph. */
 .image-box.broken{background:
   radial-gradient(circle at 75% 25%,rgba(255,247,236,.8),transparent 42%),
