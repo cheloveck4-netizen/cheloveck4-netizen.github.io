@@ -1,0 +1,66 @@
+name: "One time: install approved Natalia portrait (only if high resolution)"
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/one-time-install-natalia-photo-20261124.yml']
+permissions:
+  contents: write
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - name: Download only pre-approved uploaded portrait and verify true resolution
+        env:
+          CANVA_IMAGE_URL: 'https://media.canva.com/v2/image-resize/format:PNG/height:200/quality:100/uri:ifs%3A%2F%2FM%2Fac60c84e-b18a-4a9f-8af7-65492392c1e8/watermark:F/width:144?csig=AAAAAAAAAAAAAAAAAAAAAMfOBtoZ0VpxTclspcDurJMrkacPx_3fDv0Jtr4AsC6U&exp=1795518478&osig=AAAAAAAAAAAAAAAAAAAAABCpWpVPPBEamZhWFLBP9Uu136EG1LxBLSs4EdF8WpW8&signer=media-rpc&token=AAIAAU0AJGFjNjBjODRlLWIxOGEtNGE5Zi04YWY3LTY1NDkyMzkyYzFlOAAAAAABog09trAQ4g7oNchiyQOGpxz7OqNy2BLo1deilETo5dQt-bsZ0Q&x-canva-quality=thumbnail'
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import os, struct, urllib.request, urllib.error
+          url=os.environ['CANVA_IMAGE_URL']
+          variants=[
+            url.replace('height:200','height:1477').replace('width:144','width:1065').replace('x-canva-quality=thumbnail','x-canva-quality=original'),
+            url.replace('height:200','height:1477').replace('width:144','width:1065'),
+            url.replace('height:200','height:1200').replace('width:144','width:865'),
+          ]
+          dest=Path('images/hero-warm-20261124.png')
+          for i,link in enumerate(variants,1):
+            try:
+              req=urllib.request.Request(link,headers={'User-Agent':'Mozilla/5.0'})
+              with urllib.request.urlopen(req,timeout=20) as resp:
+                data=resp.read(8000001)
+              if len(data)<24 or data[:8]!=b'\x89PNG\r\n\x1a\n':
+                print('CANDIDATE',i,'not PNG',len(data));continue
+              width,height=struct.unpack('>II',data[16:24])
+              print('CANDIDATE',i,'res',width,height,'bytes',len(data))
+              if width<800 or height<1050 or len(data)>8000000:
+                print('SKIP_LOW_RESOLUTION');continue
+              dest.write_bytes(data)
+              p=Path('index.html')
+              html=p.read_text(encoding='utf-8')
+              assert html.count('src="images/hero.jpg"')==1
+              html=html.replace('src="images/hero.jpg"','src="images/hero-warm-20261124.png"')
+              assert 'Hero photo breathing room: the caption is BELOW' in html
+              p.write_text(html,encoding='utf-8')
+              print('PORTRAIT_READY',width,height)
+              break
+            except Exception as e:
+              print('CANDIDATE',i,'failed',type(e).__name__,str(e)[:120])
+          else:
+            print('NO_HIGH_RES_SOURCE: leave current portrait unchanged')
+          PY
+      - name: Commit only validated approved high-resolution portrait
+        run: |
+          if test -f images/hero-warm-20261124.png; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add images/hero-warm-20261124.png index.html
+            git commit -m "feat: display Natalia's approved warm portrait with caption below"
+            git push origin HEAD:main
+          else
+            echo "No validated high-resolution image: no site image modification."
+          fi
