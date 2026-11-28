@@ -1,0 +1,44 @@
+name: Verify approved social preview
+on:
+  push:
+    branches: [verify/post-cutover-20261128]
+    paths: ['.github/workflows/journal-og-probe.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: |
+          python3 - <<'PY'
+          import hashlib, struct, urllib.request, pathlib
+          from html.parser import HTMLParser
+          class Meta(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.fields={}
+              def handle_starttag(self,tag,attrs):
+                  if tag=='meta':
+                      a=dict(attrs)
+                      key=a.get('property',a.get('name'))
+                      if key: self.fields.setdefault(key,[]).append(a.get('content'))
+          url='https://xn--c1ajamhiblrj0b.online/'
+          path='images/homepage-open-graph-2026-11-28.png'
+          expected=(pathlib.Path(path)).read_bytes()
+          assert expected[:8]==b'\x89PNG\r\n\x1a\n'
+          print('Approved image:',len(expected),'bytes',struct.unpack('>II',expected[16:24]),flush=True)
+          for ua in ['Mozilla/5.0','TelegramBot (like TwitterBot)','facebookexternalhit/1.1','Twitterbot/1.0','VKShare']:
+              req=urllib.request.Request(url,headers={'User-Agent':ua})
+              with urllib.request.urlopen(req,timeout=20) as r:
+                  html=r.read().decode('utf-8')
+              meta=Meta();meta.feed(html)
+              assert meta.fields.get('og:image')==[url+path],(ua,meta.fields.get('og:image'))
+              assert meta.fields.get('twitter:image')==[url+path],(ua,meta.fields.get('twitter:image'))
+              req=urllib.request.Request(url+path,headers={'User-Agent':ua})
+              with urllib.request.urlopen(req,timeout=20) as r:
+                  assert r.headers.get_content_type()=='image/png'
+                  assert r.read()==expected
+              print(ua, 'OK: new preview HTML and exact approved PNG',flush=True)
+          PY
