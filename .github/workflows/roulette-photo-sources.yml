@@ -48,7 +48,7 @@ jobs:
                   assert lic.casefold()==license.casefold() or (license=="CC0" and lic.startswith("CC0")),(lic,license)
                   link=meta["LicenseUrl"]["value"]
                   assert link.startswith(("https://creativecommons.org/","http://creativecommons.org/")),(link,lic)
-                  src=info.get("thumburl",info["url"])
+                  src=info["url"]
                   assert urllib.parse.urlsplit(src).hostname=="upload.wikimedia.org",(src,info["url"])
                   raw=fetch(src)
                   im=ImageOps.exif_transpose(Image.open(io.BytesIO(raw))).convert("RGB")
