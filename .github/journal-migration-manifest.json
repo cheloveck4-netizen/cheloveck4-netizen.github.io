@@ -1,5 +1,5 @@
 {
- "release": "2311dbfbb304133d2d1c128ecda3495ea2d3ff105362187d9c65cb882f073e35",
+ "release": "30551109cbbd506b39e9d8e29020381567716adcfe18bbaf1d00c6cefc30ba6b",
  "files": [
   {
    "path": "CNAME",
@@ -698,8 +698,8 @@
   },
   {
    "path": "roulette/data.mjs",
-   "sha": "820610b8c3bf2bfbd45e83d967e11adb22e99fb5",
-   "size": 1491163
+   "sha": "5c266fe8b56e1d90455704d849e96ddb14e78c5d",
+   "size": 1492991
   },
   {
    "path": "roulette/g-alivenci-moldovenesti-malai-branza-smantana.webp",
@@ -1583,8 +1583,8 @@
   },
   {
    "path": "roulette/recipes/u-carimanola.html",
-   "sha": "97a8ffaa10cb751097fd135e034d7544dff2ab80",
-   "size": 7548
+   "sha": "05379bc0434f573ad9f9cbb2dcd40621d3926077",
+   "size": 8171
   },
   {
    "path": "roulette/recipes/u-casado.html",
@@ -1763,8 +1763,8 @@
   },
   {
    "path": "roulette/recipes/u-french-onion-soup.html",
-   "sha": "4c4b11bcd6d47ee8fd7268d40e267595fd511692",
-   "size": 8020
+   "sha": "9ccf9f24acf0f19538f67dcb1d8e923096d825af",
+   "size": 8640
   },
   {
    "path": "roulette/recipes/u-frikadeller.html",
@@ -1933,8 +1933,8 @@
   },
   {
    "path": "roulette/recipes/u-khao-soi.html",
-   "sha": "9dbaf647602e70be5f11c57b6b9fc24039b97ff7",
-   "size": 7765
+   "sha": "47c6a144de6af87f4ff9e79e60537e8a873f88ef",
+   "size": 8606
   },
   {
    "path": "roulette/recipes/u-khinkali.html",
@@ -2073,8 +2073,8 @@
   },
   {
    "path": "roulette/recipes/u-masala-dosa.html",
-   "sha": "ec2ab73818114506ac26912ff778029d3d5b6935",
-   "size": 8006
+   "sha": "3222350928988d68410f10a5c122a53472516fde",
+   "size": 8632
   },
   {
    "path": "roulette/recipes/u-masgouf.html",
@@ -2348,8 +2348,8 @@
   },
   {
    "path": "roulette/recipes/u-seekh-kebab.html",
-   "sha": "556a986c4daaf8ef9f6936c9771110d23340ec9d",
-   "size": 7350
+   "sha": "a7cd2f493f04db05af7056aad05bd48be22ba90e",
+   "size": 7989
   },
   {
    "path": "roulette/recipes/u-shah-plov.html",
@@ -2662,6 +2662,11 @@
    "size": 50592
   },
   {
+   "path": "roulette/u-carimanola.webp",
+   "sha": "c432e244897c818c0634edc1171062c5aeed6b11",
+   "size": 35808
+  },
+  {
    "path": "roulette/u-chapli-kebab.webp",
    "sha": "43196b62b99337b43950f39aac49fb9cb5373908",
    "size": 58500
@@ -2670,6 +2675,11 @@
    "path": "roulette/u-chipa.webp",
    "sha": "0e3010e8837fdfe6ec626325d3daa05e682dfc16",
    "size": 18976
+  },
+  {
+   "path": "roulette/u-french-onion-soup.webp",
+   "sha": "f12db02f64ae67bdfd8a12abaf84692dd93accb8",
+   "size": 22092
   },
   {
    "path": "roulette/u-gallo-pinto.webp",
@@ -2707,6 +2717,11 @@
    "size": 51346
   },
   {
+   "path": "roulette/u-khao-soi.webp",
+   "sha": "e11e85ee04336180f36ebfa7ddfdd14680c2ac5e",
+   "size": 45480
+  },
+  {
    "path": "roulette/u-koettbullar.webp",
    "sha": "ba43f08169d42965e7d05e7a0852640b02eaa0c3",
    "size": 68442
@@ -2725,6 +2740,11 @@
    "path": "roulette/u-mas-huni.webp",
    "sha": "6867fec9bad7e3cb41624f26e2240bd9e327828a",
    "size": 39540
+  },
+  {
+   "path": "roulette/u-masala-dosa.webp",
+   "sha": "fdb5c0a60efc4940e32ff135041967c51b1e91a7",
+   "size": 59914
   },
   {
    "path": "roulette/u-menemen.webp",
@@ -2785,6 +2805,11 @@
    "path": "roulette/u-schwaebischer-kartoffelsalat.webp",
    "sha": "db9022e5ee5215fa10a53bc3db615d7ff3472cd7",
    "size": 40216
+  },
+  {
+   "path": "roulette/u-seekh-kebab.webp",
+   "sha": "97326bce39283f73cc315c775acefd6dc22a7e0a",
+   "size": 84822
   },
   {
    "path": "roulette/u-shah-plov.webp",
