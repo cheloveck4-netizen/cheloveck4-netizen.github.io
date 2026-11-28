@@ -1,5 +1,5 @@
 import { goal, startMetrics } from './metrics.mjs?v=12.3';
-import { recipes } from './data.mjs?v=14';
+import { recipes } from './data.mjs?v=15';
 import { displayNutritionValue, formatNutritionValue, filterRecipes, ingredientLine, portions } from './catalog.mjs?v=13.2';
 import {
   wrap, spinEase, dragTarget, settleEase, clamp, SPIN_MS,
@@ -482,7 +482,7 @@ function openRecipe() {
   }
   if (row.source.credit) credits.append(creditLine('Рецепт', row.source.credit, row.source.url,
     row.source.license, row.source.licenseUrl));
-  if (row.image.credit) credits.append(creditLine('Фото', row.image.credit, row.image.creditUrl,
+  if (row.image.credit) credits.append(creditLine(row.image.review === 'pending-original-review' ? 'Фото (сведения из прежнего каталога)' : 'Фото', row.image.credit, row.image.creditUrl,
     row.image.license, row.image.licenseUrl, ' · уменьшено для сайта'));
   if (row.image.note) credits.append(el('p', '', row.image.note));
   if (row.image.origin === 'synthetic') credits.append(el('p', '', 'Изображение сгенерировано как иллюстрация блюда.'));
