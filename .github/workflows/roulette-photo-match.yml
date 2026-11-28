@@ -1,0 +1,26 @@
+name: Match remaining recipe images with original sources
+on:
+  push:
+    branches: [repair/roulette-photo-sources]
+    paths: ['.github/workflows/roulette-photo-match.yml']
+permissions:
+  contents: write
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        part: [0,1,2,3,4]
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: python3 -m pip install Pillow numpy
+      - run: python3 .github/scripts/roulette_photo_match.py ${{ matrix.part }}
+      - run: |
+          git config user.name "Recipe photo review"
+          git config user.email "recipe-photo-review@users.noreply.github.com"
+          git add verified-recipe-photos
+          git commit -m "Verify recipe photographs — batch ${{ matrix.part }}"
+          git push origin HEAD:refs/heads/repair/photo-verified-${{ matrix.part }}
