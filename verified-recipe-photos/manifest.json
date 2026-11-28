@@ -1,0 +1,67 @@
+{
+  "u-seekh-kebab": {
+    "file": "u-seekh-kebab.webp",
+    "sha256": "19a292ebfd01d16f250eaef76b1896a671e6b61fb4896ec9f64b2a2158793577",
+    "credit": "Sm faysal",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Beef_shik_kabar_with_onion_%26_roti.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 705,
+    "height": 720,
+    "original": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Beef_shik_kabar_with_onion_%26_roti.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "review": "matched-original",
+    "contentMatch": true
+  },
+  "u-masala-dosa": {
+    "file": "u-masala-dosa.webp",
+    "sha256": "0a8e9b9514f3dffeaf3475ca47e548119edc8f1dcecd37093307be59bfea79fa",
+    "credit": "Yakshitha",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Masala_Dosa_2023.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 720,
+    "height": 540,
+    "original": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Masala_Dosa_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "review": "matched-original",
+    "contentMatch": true
+  },
+  "u-french-onion-soup": {
+    "file": "u-french-onion-soup.webp",
+    "sha256": "8c885806dcfe8d33e151eb61a200a24fc2772b49e11748d2ca320b7edfbdd375",
+    "credit": "Ludovic Péron",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Soupe_%C3%A0_l%27oignon.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 720,
+    "height": 480,
+    "original": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Soupe_%C3%A0_l%27oignon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "review": "matched-original",
+    "contentMatch": true
+  },
+  "u-carimanola": {
+    "file": "u-carimanola.webp",
+    "sha256": "ae1e46e71fc46f8c260f45ba91d2b19cf08220200127236ce5d3dd0e10a9d7d2",
+    "credit": "Jdvillalobos",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Barranquilla_-_Carima%C3%B1olas.jpg",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "width": 720,
+    "height": 540,
+    "original": "https://upload.wikimedia.org/wikipedia/commons/2/24/Barranquilla_-_Carima%C3%B1olas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "review": "matched-original",
+    "contentMatch": true
+  },
+  "u-khao-soi": {
+    "file": "u-khao-soi.webp",
+    "sha256": "91abc0f4c4031f4d690e05ebb2be98bcd9946f30c320dd844c4ef82c8ce75ffa",
+    "credit": "Chainwit.",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Chiang_Mai_-_Khao_Soi_Khun_Yai_-_%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%8B%E0%B8%AD%E0%B8%A2%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%A2%E0%B8%B2%E0%B8%A2_%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88_(2026)_-_IMG_05.jpg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "width": 540,
+    "height": 720,
+    "original": "https://upload.wikimedia.org/wikipedia/commons/2/21/Chiang_Mai_-_Khao_Soi_Khun_Yai_-_%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%8B%E0%B8%AD%E0%B8%A2%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%A2%E0%B8%B2%E0%B8%A2_%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88_%282026%29_-_IMG_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "review": "matched-original",
+    "contentMatch": true
+  }
+}
