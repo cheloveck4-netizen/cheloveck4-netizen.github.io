@@ -1,6 +1,6 @@
 import concurrent.futures, hashlib, json, pathlib, urllib.request, urllib.parse, time, os
 root=pathlib.Path.cwd()
-source="https://xn--c1ajamhiblrj0b.online"
+source="https://natalya-journal-site.cheloveck4.workers.dev"
 manifest=json.loads((root/".github/journal-migration-manifest.json").read_text())
 release=manifest["release"]
 def get(path, maxsize):
