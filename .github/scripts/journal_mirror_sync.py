@@ -82,3 +82,5 @@ def sync():
 if __name__=="__main__":sync()
 
 # 2026-11-28: sync owner-authorized recipe photo repair.
+
+# 2026-11-28: immediately sync complete restored recipe photo archive.
