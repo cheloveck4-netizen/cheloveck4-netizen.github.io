@@ -1,5 +1,5 @@
 {
- "release": "962045973e40854cd61457eb14c6d19eacbb012fd0c08c4eed52fa2b5d98bb7c",
+ "release": "2311dbfbb304133d2d1c128ecda3495ea2d3ff105362187d9c65cb882f073e35",
  "files": [
   {
    "path": "CNAME",
@@ -8,23 +8,23 @@
   },
   {
    "path": "articles/archive/2026/index.html",
-   "sha": "1d96cd7dacfb7858bf7de0b9f9c63c17eb256f8b",
-   "size": 18465
+   "sha": "80004b2eae4c1014fffd997f243be81ed1ac358e",
+   "size": 19089
   },
   {
    "path": "articles/archive/2026/page-2.html",
-   "sha": "71e6a2ac1f41fe32f98c372aca93ff0cf02a8628",
-   "size": 19288
+   "sha": "65ffc88faa1a153c86fca05b94983a4ffdca0274",
+   "size": 18751
   },
   {
    "path": "articles/archive/2026/page-3.html",
-   "sha": "a4b8fc8dbf5bd4e73210ade31bb2c38d120d2a4a",
-   "size": 10670
+   "sha": "40680e09fbc447019d5db48a5b4e73fc58723145",
+   "size": 11999
   },
   {
    "path": "articles/belkovyy-zavtrak-bez-proteina.html",
-   "sha": "0111b48c0fe2b2644d41d5c960f97c0ed1fe442b",
-   "size": 14555
+   "sha": "662a4430946abd631d3546c83a147559631349f8",
+   "size": 14523
   },
   {
    "path": "articles/category/doctor/index.html",
@@ -43,8 +43,8 @@
   },
   {
    "path": "articles/category/nutrition/index.html",
-   "sha": "cdac788298d16ede3803ef944dd42044e5064fcc",
-   "size": 13161
+   "sha": "57502994d89b733804823b610190a28f9610b248",
+   "size": 14577
   },
   {
    "path": "articles/category/recipes/index.html",
@@ -58,53 +58,53 @@
   },
   {
    "path": "articles/chto-obsudit-pri-vysokom-holesterine.html",
-   "sha": "288304710719a5bc4b1349a79e07501f96336488",
-   "size": 15058
+   "sha": "9adf2131e51d725245be0daacf9db2b2105493df",
+   "size": 15026
   },
   {
    "path": "articles/dva-zavtraka-iz-gotovyh-produktov.html",
-   "sha": "32f28f1fdbecc4288bb651057d1d1f0d9fffa269",
-   "size": 14442
+   "sha": "333b4e4ed97ff5d2fc354f5526afec6599fea269",
+   "size": 14410
   },
   {
    "path": "articles/hrap-i-pauzy-dyhaniya-vo-sne.html",
-   "sha": "4f1c71264309b47068adf600835803f9bf91c178",
-   "size": 14675
+   "sha": "4e3989ebd0244d20129ade1068076c2e6770d2be",
+   "size": 14643
   },
   {
    "path": "articles/index.html",
-   "sha": "53a3a82863e3ae552e56143ef1fddfd6ad1d8a36",
-   "size": 27454
+   "sha": "66216188ed1eb3f9fb4c37f020ce2fdd2785b214",
+   "size": 28869
   },
   {
    "path": "articles/kak-izmeryat-davlenie-doma.html",
-   "sha": "da64f29638fd4268baa61b115504e6ba1e7fbb00",
-   "size": 15223
+   "sha": "d57111788ee2a18868ca8474b2b2f09b68251622",
+   "size": 15191
   },
   {
    "path": "articles/kak-vybrat-obsledovaniya.html",
-   "sha": "dbd886bbc0005cfb50800003541638fe427939b1",
-   "size": 18696
+   "sha": "fe08e17cef6dfb51ae185a0b2f2f56baeb3c040f",
+   "size": 18664
   },
   {
    "path": "articles/max-2026-11-15-evening.html",
-   "sha": "48e35af2df6393f25c5b5bf84b7055a3877a0245",
-   "size": 15438
+   "sha": "70cbc2ec7aa2efd6ec5a7d8f139d5379f949620e",
+   "size": 15451
   },
   {
    "path": "articles/max-2026-11-19-evening.html",
-   "sha": "846dc6ef5bb3b989676c2343044a99f735a4c08a",
-   "size": 14937
+   "sha": "4a8fd1d65c8ce27e9f886ff6326e9dc715683ee8",
+   "size": 14950
   },
   {
    "path": "articles/max-2026-11-19-heating-makeup.html",
-   "sha": "deaa8b6f5906807f82cad9703777a24488725016",
-   "size": 16697
+   "sha": "27454268ccf12446dfe9e4b4d351c0d5feb0ba1c",
+   "size": 16665
   },
   {
    "path": "articles/max-2026-11-25-promo.html",
-   "sha": "43e91120f3b35c9d5a1c31803d470abe85719448",
-   "size": 15527
+   "sha": "292ecd38fb4e72cac90139139a478db053123f3e",
+   "size": 15495
   },
   {
    "path": "articles/max-2026-11-26-evening.html",
@@ -113,8 +113,8 @@
   },
   {
    "path": "articles/max-2026-11-26-morning.html",
-   "sha": "98767438133ad2fd7cc82586788ebffec549a99d",
-   "size": 14240
+   "sha": "13f8d3c6bfa16522cbb7f01492a0812dbd511f6b",
+   "size": 14253
   },
   {
    "path": "articles/max-2026-11-27-evening.html",
@@ -127,49 +127,54 @@
    "size": 20076
   },
   {
+   "path": "articles/max-2026-11-28-morning.html",
+   "sha": "c9d36fdc153d28565944535d6b5ce3689b0d7a91",
+   "size": 14730
+  },
+  {
    "path": "articles/obychnye-produkty-vmesto-superfudov.html",
    "sha": "46eb437c82fac47a39450152a0d1d3214e2c9a96",
    "size": 18501
   },
   {
    "path": "articles/omega-3-epa-dha-etiketka.html",
-   "sha": "98b565b2ee1c5a83e7ac10e613b8d590014fa96f",
-   "size": 17924
+   "sha": "b1581d89e0a9c7ebf9409b0e3de2583c606df015",
+   "size": 17948
   },
   {
    "path": "articles/page-2.html",
-   "sha": "5d2f386b5978b3921eec95ce52923b9ae900dc9c",
-   "size": 19444
+   "sha": "3d26dd3f55a8f27410e3af935c77ca0e856e6170",
+   "size": 18907
   },
   {
    "path": "articles/page-3.html",
-   "sha": "51834db3205671478bd5cb693fa7d07a615599e4",
-   "size": 10826
+   "sha": "b3da5eab2183e3fe7da0f615c884a2ec77159a23",
+   "size": 12155
   },
   {
    "path": "articles/perlotto-s-kuricey-i-shampinonami.html",
-   "sha": "3670baea6ca15ac7b7a1bf37ed48843125f05887",
-   "size": 15304
+   "sha": "fe942fd0dfd60f2e863617500f0328a1e3917501",
+   "size": 15272
   },
   {
    "path": "articles/pochemu-posle-obeda-snova-golod.html",
-   "sha": "e5f1250f49f01d760728cb3372e22709946a28a5",
-   "size": 18761
+   "sha": "fbd5ebfd1e29bc5636f1487f42af9ea13b3297a3",
+   "size": 18774
   },
   {
    "path": "articles/pochemu-postoyanno-myornesh.html",
-   "sha": "bd2f9e0208ec974842c35bb31ec402925fee4aaf",
-   "size": 18973
+   "sha": "81c962b69bb7fcc2dbd3941aaf0e107457983308",
+   "size": 18941
   },
   {
    "path": "articles/prediabet-kak-proveryayut.html",
-   "sha": "1f1af034bda718ae70c5df562349f259560f8b6b",
-   "size": 15054
+   "sha": "c92e748db6da7c0e4d7e684206df40d943334756",
+   "size": 15022
   },
   {
    "path": "articles/produktovaya-korzina-na-nedelyu.html",
-   "sha": "8e0dd6116010fcefc1c3b61befbd5db3398f2c0f",
-   "size": 14121
+   "sha": "4a32dc11459f27ed11438a9b9592a6d55ab55eb4",
+   "size": 14134
   },
   {
    "path": "articles/search.html",
@@ -178,43 +183,43 @@
   },
   {
    "path": "articles/sladkoe-posle-edy.html",
-   "sha": "2ac36c088d43587c0eacde4528da9f0ccc40ec30",
-   "size": 18544
+   "sha": "31534e38255418bad1606e4dc888abb641317857",
+   "size": 18557
   },
   {
    "path": "articles/steatoz-pecheni-v-zaklyuchenii-uzi.html",
-   "sha": "1b9764a6bbff53a48dfb9aed4be5c7049397f2bd",
-   "size": 20081
+   "sha": "906ddcdfa07c66844df05aba0b4d3ac46bd80099",
+   "size": 20049
   },
   {
    "path": "articles/sytnyy-zavtrak-na-vyhodnye.html",
-   "sha": "f5790c92edfac4c79ac25bc9550943da1cd0cd5c",
-   "size": 17036
+   "sha": "200f21b31c5147b08446d69bcb9eb50c4f163f4c",
+   "size": 17004
   },
   {
    "path": "articles/ustalost-i-analizy-na-zhelezo.html",
-   "sha": "5de0489df466a6ba904de1ed7fe81eacf4d1fe18",
-   "size": 14971
+   "sha": "6bc45449364401a9b4c9d1c166f1c28ea14d69e9",
+   "size": 14939
   },
   {
    "path": "articles/yogurt-fitnes.html",
-   "sha": "dff21d27b27e8114b14ee888d08ff09f157b66d9",
-   "size": 17945
+   "sha": "67478dd8fecd0e78c1d91f6cddffcc258ef1723d",
+   "size": 17958
   },
   {
    "path": "articles/zapory-chto-obsudit-s-vrachom.html",
-   "sha": "a25ec5c198f0dfd9a50224569a70970a1008fe96",
-   "size": 19899
+   "sha": "4da96837aa260cb5240e66386abb563f07272101",
+   "size": 19867
   },
   {
    "path": "articles/zavtrak-s-soboy-na-rabotu.html",
-   "sha": "d0910d96429dabeb840ad94ce7e64a19f0e427f4",
-   "size": 13816
+   "sha": "2a280d19ea9d202e8300968598faed455a2e2c2e",
+   "size": 13784
   },
   {
    "path": "articles/zavtrak-za-10-minut.html",
-   "sha": "ea0aee8af84b1a77452cf098f0e58e17c417c143",
-   "size": 13831
+   "sha": "a40d41b7adc680c85689782fd0e5b0e33c3e090f",
+   "size": 13799
   },
   {
    "path": "assets/journal-fonts/manrope.OFL.txt",
@@ -243,8 +248,8 @@
   },
   {
    "path": "assets/journal-index.json",
-   "sha": "486e8ef66ff6fcb729b6497c9ff0e93d41fec6e2",
-   "size": 23658
+   "sha": "bb5f1e60aa2f30d5b865198223fb4fa4c095673f",
+   "size": 24567
   },
   {
    "path": "assets/journal-search.js",
@@ -260,56 +265,6 @@
    "path": "assets/living-luxury.js",
    "sha": "ea4497177d60c2f61cca7658bb8040d7d781d68c",
    "size": 4614
-  },
-  {
-   "path": "avito-assets/2026-11-24-premium/01_clinical_nutritionist_safe.jpg",
-   "sha": "6cb3505ca7414eae0e444cc3fb05db8863de4249",
-   "size": 437953
-  },
-  {
-   "path": "avito-assets/2026-11-24-premium/02_when_to_consult.jpg",
-   "sha": "dfa74cdedec6d5d2348f62afc6c35d7b44e554ad",
-   "size": 638398
-  },
-  {
-   "path": "avito-assets/2026-11-24-premium/03_consultation_directions.jpg",
-   "sha": "2967352f49892db441b1b5caec04e156f68ef162",
-   "size": 708567
-  },
-  {
-   "path": "avito-assets/2026-11-24-premium/04_consultation_favorite.jpg",
-   "sha": "128e1e5f8664d69ccbae0d463691616076f48172",
-   "size": 666027
-  },
-  {
-   "path": "avito-assets/2026-11-24-premium/05_prices.jpg",
-   "sha": "845cba1e41db0d94eff04008bc4de668838ac0c5",
-   "size": 594805
-  },
-  {
-   "path": "avito-assets/2026-11-24-premium/06_extended_support.jpg",
-   "sha": "f7d8b35256482050bb6dbf40d0903af602eeddef",
-   "size": 651991
-  },
-  {
-   "path": "avito-assets/2026-11-24-premium/07_professional_approach.jpg",
-   "sha": "94f207aa8cb9c0051cb6bcf0813d63d580d7219f",
-   "size": 648580
-  },
-  {
-   "path": "avito-assets/2026-11-24-premium/08_booking.jpg",
-   "sha": "4ae7abc0324789e9f10884c95ee11e360542bec7",
-   "size": 619111
-  },
-  {
-   "path": "avito-assets/2026-11-24-premium/09_diplom_lechebnoe_delo.jpg",
-   "sha": "5232c6919d1d5c861716e999a66e4866fb9f9b9c",
-   "size": 666102
-  },
-  {
-   "path": "avito-assets/2026-11-24-premium/10_diplom_nutritsiologiya_original.jpg",
-   "sha": "18fb086bbf9e17003376536cb21d4f9990c7af59",
-   "size": 340748
   },
   {
    "path": "avito-assets/2026-11-24/01_ves_stoit_online.jpg",
@@ -392,6 +347,56 @@
    "size": 409966
   },
   {
+   "path": "avito-assets/2026-11-24-premium/01_clinical_nutritionist_safe.jpg",
+   "sha": "6cb3505ca7414eae0e444cc3fb05db8863de4249",
+   "size": 437953
+  },
+  {
+   "path": "avito-assets/2026-11-24-premium/02_when_to_consult.jpg",
+   "sha": "dfa74cdedec6d5d2348f62afc6c35d7b44e554ad",
+   "size": 638398
+  },
+  {
+   "path": "avito-assets/2026-11-24-premium/03_consultation_directions.jpg",
+   "sha": "2967352f49892db441b1b5caec04e156f68ef162",
+   "size": 708567
+  },
+  {
+   "path": "avito-assets/2026-11-24-premium/04_consultation_favorite.jpg",
+   "sha": "128e1e5f8664d69ccbae0d463691616076f48172",
+   "size": 666027
+  },
+  {
+   "path": "avito-assets/2026-11-24-premium/05_prices.jpg",
+   "sha": "845cba1e41db0d94eff04008bc4de668838ac0c5",
+   "size": 594805
+  },
+  {
+   "path": "avito-assets/2026-11-24-premium/06_extended_support.jpg",
+   "sha": "f7d8b35256482050bb6dbf40d0903af602eeddef",
+   "size": 651991
+  },
+  {
+   "path": "avito-assets/2026-11-24-premium/07_professional_approach.jpg",
+   "sha": "94f207aa8cb9c0051cb6bcf0813d63d580d7219f",
+   "size": 648580
+  },
+  {
+   "path": "avito-assets/2026-11-24-premium/08_booking.jpg",
+   "sha": "4ae7abc0324789e9f10884c95ee11e360542bec7",
+   "size": 619111
+  },
+  {
+   "path": "avito-assets/2026-11-24-premium/09_diplom_lechebnoe_delo.jpg",
+   "sha": "5232c6919d1d5c861716e999a66e4866fb9f9b9c",
+   "size": 666102
+  },
+  {
+   "path": "avito-assets/2026-11-24-premium/10_diplom_nutritsiologiya_original.jpg",
+   "sha": "18fb086bbf9e17003376536cb21d4f9990c7af59",
+   "size": 340748
+  },
+  {
    "path": "images/bg-hero.jpg",
    "sha": "74ab4b7b6d347304f9f5c245e37f1344c31e4a88",
    "size": 6013609
@@ -440,6 +445,11 @@
    "path": "images/hero.jpg",
    "sha": "c937c8b82a6c5b625ba5a5aff0b5508b3a158508",
    "size": 4118528
+  },
+  {
+   "path": "images/homepage-open-graph-2026-11-28.png",
+   "sha": "0c7a9c4af5eb89bd79ee73a2c5b75170afe5e564",
+   "size": 1965532
   },
   {
    "path": "images/journal/belkovyy-zavtrak-bez-proteina.jpg",
@@ -510,6 +520,11 @@
    "path": "images/journal/max-2026-11-27-morning.jpg",
    "sha": "4cc4a1e322cd62a1cc5c82c1303bf19f87cab75c",
    "size": 591657
+  },
+  {
+   "path": "images/journal/max-2026-11-28-morning.jpg",
+   "sha": "f992c50d3980454dc333132668cf2e1a989011b7",
+   "size": 639258
   },
   {
    "path": "images/journal/obychnye-produkty-vmesto-superfudov.jpg",
@@ -628,8 +643,8 @@
   },
   {
    "path": "index.html",
-   "sha": "a0c1a6b8f054b08d953f4ee2c9b398fe8128f12a",
-   "size": 81473
+   "sha": "fa4fa3fce890c7e07d28f6ae717ef5923926ffeb",
+   "size": 82459
   },
   {
    "path": "max.html",
@@ -643,8 +658,8 @@
   },
   {
    "path": "pinterest.xml",
-   "sha": "17e9fef63cbbb9b4feed5e4580209d0d6eef6875",
-   "size": 37331
+   "sha": "941a4e86bcc8a2ee4893117a5c076db3061e7a35",
+   "size": 38698
   },
   {
    "path": "robots.txt",
@@ -3023,8 +3038,8 @@
   },
   {
    "path": "sitemap.xml",
-   "sha": "2760c3e8d20568d4d020e6b3310e6af2faeba3ab",
-   "size": 35679
+   "sha": "40233c16f8501471698bce9cbf3623799c1059fc",
+   "size": 35831
   }
  ]
 }
