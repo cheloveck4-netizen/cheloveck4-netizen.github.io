@@ -80,3 +80,5 @@ def sync():
     print("Verified",len(results),"files; copied",results.count("copied"),"reused",results.count("reused"),"release",release)
 
 if __name__=="__main__":sync()
+
+# 2026-11-28: sync owner-authorized recipe photo repair.
