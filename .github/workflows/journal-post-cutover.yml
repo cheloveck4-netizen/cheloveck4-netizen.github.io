@@ -1,0 +1,29 @@
+name: Post cutover public access check
+on:
+  push:
+    branches: [verify/post-cutover-20261128]
+    paths: ['.github/workflows/journal-post-cutover.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: |
+          set -euo pipefail
+          host=xn--c1ajamhiblrj0b.online
+          ok=0
+          for i in $(seq 1 36); do
+            ip=$(curl -4 --fail --silent --show-error --connect-timeout 8 --max-time 15 -w '%{remote_ip}' "https://$host/journal-release.txt?post_cutover=$i" -o "$RUNNER_TEMP/actual" || true)
+            if [[ "$ip" =~ ^185\.199\.10[89]\.153$|^185\.199\.11[01]\.153$ ]] && cmp -s journal-release.txt "$RUNNER_TEMP/actual"; then ok=1; break; fi
+            sleep 10
+          done
+          test "$ok" = 1
+          echo "Public DNS and HTTPS reached GitHub IP: $ip"
+          for p in index.html articles/index.html roulette/index.html sitemap.xml pinterest.xml; do
+            curl -4 --fail --silent --show-error --retry 2 "https://$host/$p" -o "$RUNNER_TEMP/actual"
+            cmp "$p" "$RUNNER_TEMP/actual"
+          done
+          echo "Public site, journal, roulette, sitemap and Pinterest RSS verified"
