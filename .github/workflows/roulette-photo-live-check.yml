@@ -1,0 +1,46 @@
+name: Verify live recipe photo repair
+on:
+  push:
+    branches: [verify/post-cutover-20261128]
+    paths: ['.github/workflows/roulette-photo-live-check.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: main
+      - run: |
+          set -euo pipefail
+          host=https://xn--c1ajamhiblrj0b.online
+          ok=0
+          for i in $(seq 1 36); do
+            if curl -4 -fsS --max-time 15 "$host/journal-release.txt?photo_check=$i" -o "$RUNNER_TEMP/actual" && cmp -s journal-release.txt "$RUNNER_TEMP/actual"; then ok=1; break; fi
+            sleep 10
+          done
+          test "$ok" = 1
+          for id in u-seekh-kebab u-masala-dosa u-french-onion-soup u-carimanola u-khao-soi; do
+            for p in "roulette/$id.webp" "roulette/recipes/$id.html"; do
+              curl -4 -fsS --retry 2 "$host/$p" -o "$RUNNER_TEMP/actual"
+              cmp "$p" "$RUNNER_TEMP/actual"
+            done
+            echo "Verified live photo and recipe: $id"
+          done
+          curl -4 -fsS --retry 2 "$host/roulette/data.mjs" -o "$RUNNER_TEMP/actual"
+          cmp roulette/data.mjs "$RUNNER_TEMP/actual"
+          node --input-type=module - <<'JS'
+          import assert from 'node:assert/strict';
+          import {recipes} from './roulette/data.mjs';
+          assert.equal(recipes.length,300);
+          for(const cat of ['breakfast','lunch','dinner']) assert.equal(recipes.filter(r=>r.cat===cat).length,100);
+          assert.equal(recipes.filter(r=>r.image.placeholder).length,145);
+          for(const id of ['u-seekh-kebab','u-masala-dosa','u-french-onion-soup','u-carimanola','u-khao-soi']){
+            const row=recipes.find(r=>r.id===id);
+            assert.equal(row.image.src,'/roulette/'+id+'.webp');
+            assert.equal(row.image.rights,'licensed');
+          }
+          console.log('Live data: 300 recipes; 155 with images; 145 pending.');
+          JS
