@@ -1,0 +1,21 @@
+name: Direct GitHub Pages origin check
+on:
+  push:
+    branches: [journal-public-mirror]
+    paths: ['.github/workflows/journal-origin-probe.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: |
+          set -euo pipefail
+          host=xn--c1ajamhiblrj0b.online
+          for p in journal-release.txt index.html articles/index.html roulette/index.html; do
+            curl --fail --silent --show-error --retry 2 --resolve "$host:443:185.199.108.153" "https://$host/$p" -o "$RUNNER_TEMP/actual"
+            cmp "$p" "$RUNNER_TEMP/actual"
+          done
+          echo "Direct origin TLS and four public files verified"
