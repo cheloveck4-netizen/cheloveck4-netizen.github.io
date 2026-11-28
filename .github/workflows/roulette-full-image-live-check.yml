@@ -1,0 +1,49 @@
+name: Verify all 300 live roulette images
+on:
+  push:
+    branches: [verify/post-cutover-20261128]
+    paths: ['.github/workflows/roulette-full-image-live-check.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: main
+      - run: |
+          set -euo pipefail
+          host=https://xn--c1ajamhiblrj0b.online
+          ok=0
+          for i in $(seq 1 36); do
+            if curl -4 -fsS --max-time 15 "$host/journal-release.txt?archive_check=$i" -o "$RUNNER_TEMP/actual" && cmp -s journal-release.txt "$RUNNER_TEMP/actual"; then ok=1; break; fi
+            sleep 10
+          done
+          test "$ok" = 1
+          python3 - <<'PY'
+          import json, pathlib, urllib.request, concurrent.futures
+          root=pathlib.Path('.')
+          host='https://xn--c1ajamhiblrj0b.online'
+          def fetch(path):
+              req=urllib.request.Request(host+'/'+path+'?archive_check=20261128',headers={'User-Agent':'Mozilla/5.0','Accept-Encoding':'identity'})
+              with urllib.request.urlopen(req,timeout=25) as r:
+                  return r.read()
+          raw=fetch('roulette/data.mjs')
+          assert raw==(root/'roulette/data.mjs').read_bytes()
+          rows=json.loads(raw.decode().removeprefix('export const recipes = ').strip().removesuffix(';'))
+          assert len(rows)==300
+          assert all(not x['image'].get('placeholder') and x['image']['src']!='/roulette/photo-pending.webp' for x in rows)
+          paths=sorted({x['image']['src'].lstrip('/') for x in rows})
+          assert len(paths)==300
+          def check(p):
+              local=(root/p).read_bytes()
+              actual=fetch(p)
+              assert actual==local,p
+              assert actual[:4]==b'RIFF' and actual[8:12]==b'WEBP',p
+              return p
+          with concurrent.futures.ThreadPoolExecutor(max_workers=10) as ex:
+              results=list(ex.map(check,paths))
+          print('LIVE: 300 recipes,',len(results),'exact WebP images, zero placeholders')
+          PY
