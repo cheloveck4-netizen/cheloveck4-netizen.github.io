@@ -1,0 +1,197 @@
+@font-face{font-family:Journal Serif;src:url('/assets/journal-fonts/playfair.woff2') format('woff2');font-weight:400 900;font-display:swap}
+:root{--journal-wine:#6c394d;--journal-bordeaux:#502738;--journal-line:#c4a286;--journal-powder:#faefed;--journal-porcelain:#fff8f4;--journal-ivory:#fffdfb}
+.hero-grid>.hero-copy{min-width:0}
+.hero-grid>.hero-visual{isolation:isolate}
+.hero-grid>.hero-visual::before{z-index:-1;pointer-events:none}
+.hero-visual>.social-intro{position:relative;margin:0}
+.journal-nav-entry{color:var(--journal-bordeaux);font-weight:800}
+.journal-vitrine{display:grid;position:relative;isolation:isolate;overflow:hidden;min-width:0;grid-template-columns:minmax(0,1fr) minmax(82px,.62fr);align-items:center;gap:13px;padding:clamp(15px,2.2vw,26px);border:1px solid var(--journal-line);border-radius:12px;color:var(--journal-bordeaux);text-decoration:none;background:radial-gradient(ellipse at 91% 22%,#efcbd1 0,transparent 68%),linear-gradient(132deg,var(--journal-ivory),var(--journal-powder) 60%,#e2b7c0);box-shadow:0 12px 24px #50273815}
+.journal-vitrine::before{position:absolute;inset:4px;z-index:-1;border:1px solid #a879614d;border-radius:8px;content:'';pointer-events:none}
+.journal-vitrine::after{position:absolute;inset:-50% -52%;content:'';pointer-events:none;background:linear-gradient(112deg,transparent 43%,#fff8f444 49%,#fffdfa66 51%,transparent 57%);transform:translateX(-62%);transition:transform .68s ease}
+.journal-vitrine:is(:hover,:focus-visible,:active)::after{transform:translateX(62%)}
+.journal-vitrine:focus-visible,.journal-latest-grid a:focus-visible{outline:2px solid var(--journal-wine);outline-offset:4px}
+.vitrine-copy{display:grid;justify-items:start;gap:6px;min-width:0}
+.vitrine-kicker{font-size:.63rem;line-height:1.4;letter-spacing:.085em;text-transform:uppercase;font-weight:800}
+.vitrine-copy strong{font:600 clamp(1.25rem,2.6vw,2.17rem)/1.06 Journal Serif,Georgia,serif;letter-spacing:-.03em}
+.vitrine-line,.vitrine-description,.vitrine-access{font-size:.76rem;line-height:1.4}
+.vitrine-access{font-weight:750}
+.vitrine-action{padding:8px 11px;min-height:34px;display:inline-flex;align-items:center;gap:8px;margin-top:3px;background:var(--journal-bordeaux);color:var(--journal-ivory);border:1px solid var(--journal-line);border-radius:6px;font-size:.75rem;font-weight:800}
+.vitrine-covers{display:grid;grid-template-columns:1fr 1fr;align-items:center;padding-inline:3px 8px}
+.vitrine-covers img{width:124%;max-width:none;height:auto;aspect-ratio:3/4;object-fit:contain;border:1px solid #cfb398;border-radius:3px;box-shadow:0 9px 14px #3a1b3555}
+.vitrine-covers img:first-child{z-index:1;transform:translateX(5%) rotate(-7deg)}
+.vitrine-covers img:nth-child(2){transform:translateX(-8%) translateY(7%) rotate(8deg)}
+.journal-latest{padding-block:36px 45px}
+.journal-latest h2{border-top:1px solid var(--journal-line);padding-top:16px;margin:0 0 18px;color:var(--journal-bordeaux);font:600 clamp(1.7rem,4vw,2.75rem)/1.15 Journal Serif,Georgia,serif}
+.journal-latest-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2vw,24px)}
+.journal-latest-grid a{display:grid;grid-template-columns:66px minmax(0,1fr);gap:12px;min-width:0;align-items:start;padding:10px;color:#45323a;border-bottom:1px solid #d8babc;text-decoration:none}
+.journal-latest-grid a:hover strong{text-decoration:underline}
+.journal-latest-grid img{width:100%;height:auto;border-radius:4px}
+.journal-latest-grid strong{display:block;line-height:1.38}
+.journal-latest-summary{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:4px;font-size:.81rem;line-height:1.5}
+html[data-journal-design="b"] .journal-vitrine{color:#fff8f4;background:radial-gradient(ellipse at 92% 2%,#924f66 0,transparent 68%),linear-gradient(129deg,#421b2e,#6c394d 63%,#502738)}
+html[data-journal-design="b"] .vitrine-action{background:#f8e9da;color:var(--journal-bordeaux)}
+@media(max-width:740px){
+  .hero-grid{padding-block:20px 42px;gap:25px}
+  .hero-grid>.hero-visual{grid-row:1;padding:0;gap:12px}
+  .hero-grid>.hero-visual .portrait-frame{height:clamp(216px,59vw,325px);aspect-ratio:auto}
+  .hero-grid>.hero-visual .portrait-frame img{height:100%;width:100%;object-fit:cover;object-position:center 29%}
+  .hero-grid>.hero-visual::before{inset:10px 4% 100px 8%}
+  .vitrine-description{display:none}
+  .journal-vitrine{min-height:154px;grid-template-columns:minmax(0,1fr) 100px;gap:9px}
+  .journal-latest-grid{grid-template-columns:minmax(0,1fr);gap:8px}
+  .journal-latest-grid a{grid-template-columns:58px minmax(0,1fr)}
+}
+@media(prefers-reduced-motion:reduce){.journal-vitrine::after{display:none}}
+
+/* Owner-approved refinement: consultation before editorial browsing on mobile. */
+.logo-copy small{max-width:260px;line-height:1.4;white-space:normal;letter-spacing:.045em}
+.journal-vitrine{min-height:0;gap:14px}
+.vitrine-copy{gap:8px}
+.vitrine-kicker{font-size:.65rem}
+.vitrine-action{min-height:40px}
+@media(max-width:740px){
+ .logo-copy small{max-width:220px;font-size:clamp(8px,2.25vw,10px)}
+ .hero-grid{gap:16px}
+ .hero-grid>.hero-visual{display:contents}
+ .hero-grid>.hero-visual::before{display:none}
+ .hero-grid>.hero-visual .portrait-frame{grid-row:1;height:auto;aspect-ratio:4/4.45;margin:0}
+ .hero-grid>.hero-visual .portrait-frame img{object-position:center top}
+ .hero-grid>.hero-copy{grid-row:2;padding-top:2px}
+ .hero-grid .journal-vitrine{grid-row:3;min-height:0;grid-template-columns:minmax(0,1fr) 94px;padding:14px;gap:10px}
+ .hero-grid .social-intro{grid-row:4;margin:0;min-width:0}
+ .hero-grid .picture-note{grid-row:5;width:100%;margin:0}
+ .journal-vitrine .vitrine-copy strong{font-size:clamp(20px,5.8vw,27px)}
+ .journal-latest{padding-block:24px 36px}
+}
+
+/* Selected light vitrine, directly below the portrait, with a short CSS gloss. */
+html[data-journal-design="b"] .journal-vitrine,.journal-vitrine{color:var(--journal-bordeaux);background:radial-gradient(ellipse at 95% 15%,#f2d5dc 0,transparent 72%),linear-gradient(132deg,#fffdfb,#faefed 65%,#edd3d5);box-shadow:0 7px 18px #50273812}
+.journal-vitrine::after{display:none}
+html[data-journal-design="b"] .vitrine-action,.vitrine-action{position:relative;overflow:hidden;isolation:isolate;background:var(--journal-bordeaux);color:var(--journal-ivory);min-height:40px}
+ .vitrine-action::after{content:'';position:absolute;left:-78%;top:-55%;width:76%;height:210%;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,#fff7e73b 0%,#fff7e72b 25%,#fff8ef12 52%,transparent 75%);transform:translateX(0) rotate(-24deg);animation:journal-button-gloss 1.5s linear infinite}
+@keyframes journal-button-gloss{0%{transform:translateX(0) rotate(-24deg)} 66.667%,100%{transform:translateX(250%) rotate(-24deg)}}
+@media(max-width:740px){
+ .hero-grid>.hero-visual .portrait-frame{aspect-ratio:4/4.45}
+ .hero-grid .journal-vitrine{grid-row:2;min-height:0;padding:12px 13px;gap:8px;grid-template-columns:minmax(0,1fr) 90px;margin-top:-5px}
+ .hero-grid>.hero-copy{grid-row:3}
+ .vitrine-copy{gap:5px}
+ .vitrine-kicker{font-size:.59rem;letter-spacing:.045em;line-height:1.3}
+ .journal-vitrine .vitrine-copy strong{font-size:clamp(20px,5.6vw,25px)}
+ .vitrine-action{margin-top:2px;padding:6px 10px}
+}
+@media(prefers-reduced-motion:reduce){.vitrine-action::after{animation:none;display:none}}
+
+/* Portrait signature: a quiet editorial line, not another heading. */
+.portrait-motto{display:flex;align-items:center;justify-content:center;gap:10px;margin:0;text-align:center;color:var(--journal-bordeaux);font:italic 400 clamp(17px,2vw,24px)/1.3 Journal Serif,Georgia,serif;letter-spacing:-.025em}
+.portrait-motto::before,.portrait-motto::after{content:'';height:1px;flex:1 1 12px;max-width:40px;background:linear-gradient(90deg,transparent,#c4a286)}
+.portrait-motto::after{transform:scaleX(-1)}
+@media(max-width:740px){
+ .hero-grid>.hero-visual .portrait-motto{grid-row:1;margin:0 0 -7px;font-size:clamp(16px,4.6vw,21px);gap:8px}
+ .hero-grid>.hero-visual .portrait-frame{grid-row:2}
+ .hero-grid .journal-vitrine{grid-row:3}
+ .hero-grid>.hero-copy{grid-row:4}
+ .hero-grid .social-intro{grid-row:5}
+ .hero-grid .picture-note{grid-row:6}
+}
+
+/* LIVING LUXURY — homepage only; decorative movement never blocks a link. */
+.journal-vitrine::before{border-color:#bd986d;box-shadow:inset 0 0 9px #c9a37222;animation:living-rim 1.5s ease-in-out infinite;opacity:.52}
+.vitrine-action::before{content:'';position:absolute;inset:0;border-radius:inherit;border:1px solid #f1d6a5;pointer-events:none;animation:living-rim 1.5s ease-in-out infinite;opacity:0}
+@keyframes living-rim{0%,70%,100%{opacity:.28} 36%{opacity:.95}}
+.living-managed:not(.living-visible) .vitrine-action::after,.living-managed:not(.living-visible) .vitrine-action::before,.living-managed:not(.living-visible)::before{animation-play-state:paused}
+.vitrine-covers img{transition:transform .95s cubic-bezier(.22,.61,.36,1)}
+.journal-vitrine:is(:focus-visible,:active) .vitrine-covers img:first-child{transform:translateX(-13%) rotate(-13deg)}
+.journal-vitrine:is(:focus-visible,:active) .vitrine-covers img:nth-child(2){transform:translateX(10%) translateY(3%) rotate(14deg)}
+@media(hover:hover) and (pointer:fine){
+ .journal-vitrine:hover .vitrine-covers img:first-child{transform:translateX(-13%) rotate(-13deg)}
+ .journal-vitrine:hover .vitrine-covers img:nth-child(2){transform:translateX(10%) translateY(3%) rotate(14deg)}
+}
+.portrait-frame:not(.has-error) img{animation:living-portrait 1.2s cubic-bezier(.22,.61,.36,1) both}
+@keyframes living-portrait{from{opacity:.78;transform:scale(1.035)}to{opacity:1;transform:scale(1)}}
+/* Lines always exist at full size; animation is applied only on first entrance. */
+.living-heading{position:relative}
+.living-heading::after{content:'';display:block;width:clamp(64px,24%,130px);height:2px;margin-top:11px;background:linear-gradient(90deg,#ad7955,#d6af80 65%,transparent);transform-origin:left;pointer-events:none}
+.living-heading.living-entered::after{animation:living-thread 1.35s cubic-bezier(.22,.61,.36,1) both}
+@keyframes living-thread{from{transform:scaleX(.06);opacity:.3}to{transform:scaleX(1);opacity:1}}
+.price-card.living-entered,.step.living-entered,.problem.living-entered,.article.living-entered,.journal-latest-grid>a.living-entered{animation:living-still 1.25s ease-in-out both}
+@keyframes living-still{from{opacity:.82}to{opacity:1}}
+.price-card{position:relative}
+.price-card::after{content:'';position:absolute;inset:0;border-radius:inherit;border:2px solid #c7a275;box-shadow:inset 0 0 18px #d7b98748;opacity:0;pointer-events:none;transition:opacity .65s ease}
+.price-card.living-entered::after{animation:living-card-rim 2.2s ease-in-out}
+@keyframes living-card-rim{0%,100%{opacity:0}45%,55%{opacity:.9}}
+.price-card:focus-within::after,.price-card:active::after{opacity:.8;animation:none}
+@media(hover:hover) and (pointer:fine){.price-card:hover::after{opacity:.8;animation:none}.article:hover .image-box img{transform:scale(1.035)}}
+.article .image-box img{transition:transform .7s cubic-bezier(.22,.61,.36,1)}
+.social-link{transition:transform .45s cubic-bezier(.22,.61,.36,1),box-shadow .45s ease}
+.social-link:active{transform:scale(.94)}
+.social-link:focus-visible{outline-offset:3px}
+@media(hover:hover) and (pointer:fine){.social-link:hover{transform:translateY(-2px);box-shadow:0 4px 12px #50273815}}
+.faq,.rule{transition:border-color .55s ease,background-color .55s ease}
+.faq[open],.rule[open]{border-color:#c9a48b}
+.faq[open]>p,.rule[open]>p{animation:living-answer .55s cubic-bezier(.22,.61,.36,1) both}
+@keyframes living-answer{from{opacity:.72}to{opacity:1}}
+@supports (interpolate-size:allow-keywords) and (transition-behavior:allow-discrete){
+ .faq,.rule{interpolate-size:allow-keywords}
+ .faq::details-content,.rule::details-content{block-size:0;overflow:clip;transition:block-size .55s cubic-bezier(.22,.61,.36,1),content-visibility .55s allow-discrete}
+ .faq[open]::details-content,.rule[open]::details-content{block-size:auto}
+}
+@media(max-width:740px){
+ html{scroll-padding-bottom:calc(65px + env(safe-area-inset-bottom,0px))}
+ .mobile-cta{min-height:46px;max-width:480px;margin-inline:auto;font-size:clamp(12px,3.6vw,15px);padding:9px 13px;border-radius:11px;bottom:max(8px,env(safe-area-inset-bottom));transition:opacity .4s ease,visibility .4s}
+ .mobile-cta.living-avoid-vitrine:not(:focus){opacity:0;visibility:hidden;pointer-events:none}
+ footer{padding-bottom:calc(85px + env(safe-area-inset-bottom,0px))}
+ :is(.journal-vitrine,.hero-ctas a,.price-card a,.social-link,.faq summary,.rule summary){scroll-margin-bottom:70px}
+}
+@media(prefers-reduced-motion:reduce){
+ .journal-vitrine::before{animation:none!important;opacity:.52}
+ .vitrine-action::before{animation:none!important;opacity:0}
+ .vitrine-action::after{display:none}
+ .portrait-frame img,.living-entered,.living-entered::after,.faq[open]>p,.rule[open]>p{animation:none!important}
+ .vitrine-covers img,.social-link,.article .image-box img{transition:none!important}
+ .journal-vitrine:is(:hover,:focus-visible,:active) .vitrine-covers img:first-child{transform:translateX(5%) rotate(-7deg)}
+ .journal-vitrine:is(:hover,:focus-visible,:active) .vitrine-covers img:nth-child(2){transform:translateX(-8%) translateY(7%) rotate(8deg)}
+ .social-link:is(:active,:hover),.article:hover .image-box img{transform:none}
+}
+
+/* LIVING LUXURY 2 — deliberate, visible motion; no artificial scroll hijacking. */
+.journal-vitrine::before{box-shadow:inset 0 0 12px #c9a3723b}
+@keyframes living-rim{0%,100%{opacity:.28} 42%{opacity:.98} 78%{opacity:.36}}
+.button,.price-card,.article{transition-duration:.5s;transition-timing-function:cubic-bezier(.22,.61,.36,1)}
+/* A first-entrance fan is useful on touch screens, where tapping a link navigates immediately. */
+@media(hover:none) and (pointer:coarse){
+ .journal-vitrine.living-fan .vitrine-covers img:first-child{animation:living-fan-first 2.1s cubic-bezier(.22,.61,.36,1) both}
+ .journal-vitrine.living-fan .vitrine-covers img:nth-child(2){animation:living-fan-second 2.1s cubic-bezier(.22,.61,.36,1) both}
+}
+@keyframes living-fan-first{0%,100%{transform:translateX(5%) rotate(-7deg)}45%,60%{transform:translateX(-13%) rotate(-13deg)}}
+@keyframes living-fan-second{0%,100%{transform:translateX(-8%) translateY(7%) rotate(8deg)}45%,60%{transform:translateX(10%) translateY(3%) rotate(14deg)}}
+@media(prefers-reduced-motion:reduce){
+ .journal-vitrine.living-fan .vitrine-covers img{animation:none!important}
+ .button,.price-card,.article{transition:none!important}
+}
+
+/* LIVING LUXURY 3 — still layout, expressive light. No moving cards or scroll effects. */
+.price-card:hover,.article:hover,.problem:hover{transform:none}
+.price-card.living-entered,.step.living-entered,.problem.living-entered,.article.living-entered{box-shadow:0 9px 25px rgba(108,57,77,.11)}
+.price-card::after{border-color:#bc8c54;box-shadow:inset 0 0 23px #d7b98760}
+.price-card.living-entered::after{animation:living-card-rim 2.8s ease-in-out}
+@keyframes living-card-rim{0%,100%{opacity:0}40%,60%{opacity:1}}
+/* Paint a local wash behind the content, without changing dimensions or positions. */
+#services,#help,#process{position:relative;isolation:isolate}
+#services::before,#help::before,#process::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;background:radial-gradient(ellipse at 88% 15%,#e9bccb66,transparent 66%),linear-gradient(145deg,#f5dfd333,transparent 75%)}
+#services.living-wash::before,#help.living-wash::before,#process.living-wash::before{animation:living-wash 2.6s ease-in-out both}
+@keyframes living-wash{from{opacity:0}to{opacity:1}}
+/* A single gentle zoom, clipped by the existing stationary image frame. */
+.problem .image-box,.article .image-box{overflow:hidden}
+.problem.living-entered .image-box img,.article.living-entered .image-box img{animation:living-image 2.3s ease-in-out both}
+@keyframes living-image{from{scale:1}to{scale:1.045}}
+/* Touch light is a stationary soft spot, not a moving ripple or a flash. */
+.living-touch{position:relative;isolation:isolate}
+.living-touch::before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(ellipse at var(--touch-x,50%) var(--touch-y,50%),#fff2ce70,transparent 75%);opacity:0}
+.living-touch.living-lit::before{animation:living-touch-light .9s ease-out both}
+@keyframes living-touch-light{0%{opacity:.1}24%{opacity:.8}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){
+ .price-card.living-entered,.step.living-entered,.problem.living-entered,.article.living-entered{box-shadow:none}
+ #services.living-wash::before,#help.living-wash::before,#process.living-wash::before{animation:none!important;opacity:0}
+ .problem.living-entered .image-box img,.article.living-entered .image-box img{animation:none!important}
+ .living-touch.living-lit::before{animation:none!important}
+}

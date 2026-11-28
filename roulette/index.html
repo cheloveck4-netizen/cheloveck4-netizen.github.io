@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="canonical" href="https://xn--c1ajamhiblrj0b.online/roulette/"><meta name="description" content="Кулинарная рулетка Натальи Черновой. Выберите завтрак, обед или ужин, откройте рецепт и настройте порции."><meta property="og:type" content="website"><meta property="og:title" content="Что сегодня едим?"><meta property="og:description" content="Кулинарная рулетка Натальи Черновой. Весь мир на вашей кухне."><meta property="og:url" content="https://xn--c1ajamhiblrj0b.online/roulette/"><meta property="og:image" content="https://xn--c1ajamhiblrj0b.online/roulette/share.webp"><meta name="theme-color" content="#f8f1e5"><title>Что сегодня едим? — Рулетка рецептов</title><link rel="stylesheet" href="/roulette/style.css?v=12.3"><link rel="modulepreload" href="/roulette/data.mjs?v=14"></head>
+<body data-roulette-production="1" data-roulette-version="13"><header class="header"><a class="brand" href="/"><svg class="leaf" aria-hidden="true" viewBox="0 0 42 42" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 35C13 24 21 15 35 6M12 30C4 15 15 6 35 6c-1 20-10 29-23 24Z"/><path d="M18 22l-2-9M23 17l8 1M9 35l-3 3"/></svg><span><strong>Наталья Чернова</strong><small>Врач-терапевт · Нутрициолог</small></span></a><nav aria-label="Навигация"><a href="/articles/index.html">Журнал</a><a href="/#services">Услуги</a></nav></header>
+<main><section class="intro"><div class="portrait"><img src="/images/natalia-portrait-warm-20261124.jpg" alt="Наталья Чернова" width="700" height="860" loading="lazy" decoding="async"></div><div class="intro-copy"><h1>Что сегодня едим?</h1><p class="subtitle">Кулинарная рулетка Натальи Черновой.</p><p class="motto">Весь мир на вашей кухне.</p><div class="tabs" role="group" aria-label="Приём пищи"><button data-cat="breakfast" aria-pressed="false"><svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18a9 9 0 0 1-18 0ZM7 21h10M6 10c-2-3 3-4 4-1 0-5 6-5 6-1 2-2 5 0 3 3"/></svg><span>Завтрак</span></button><button data-cat="lunch" aria-pressed="true"><svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h18a9 9 0 0 1-18 0ZM7 22h10M8 10c-4-3 4-4 0-8M12 10c-4-3 4-4 0-8M16 10c-4-3 4-4 0-8"/></svg><span>Обед</span></button><button data-cat="dinner" aria-pressed="false"><svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="M2 19h20M4 17a8 8 0 0 1 16 0ZM12 7V5M10 5h4"/></svg><span>Ужин</span></button></div><button id="spin" class="primary spin" type="button"><svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5v6h-6M20 11a8 8 0 1 0-2 7"/></svg><span>Запустить рулетку</span></button></div><aside class="benefits" aria-label="Как выбрать блюдо">
+<p><a href="#stage">Прокрутите карточки</a></p>
+<p><a href="#open">Откройте рецепт</a></p>
+<p><button class="benefit-filter" type="button">Подберите по продуктам</button></p>
+</aside></section>
+<section class="carousel-section" aria-label="Рулетка блюд"><div id="stage" class="stage" tabindex="0" aria-label="Карточки блюд. Смахните влево для следующего варианта."><div id="cards"></div><i id="step-size" aria-hidden="true"></i></div><div class="controls"><button id="open" class="primary" type="button"><span>Открыть рецепт</span><svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></button></div>
+<p class="browse-count" id="browse-count" aria-live="polite"></p><p class="hint dish-description" id="reaction"><strong id="reaction-cuisine"></strong><span id="reaction-ingredients"></span></p><p id="diagnostics" class="sr"></p>
+<div class="filter-bar">
+  <details id="filters"><summary>Подбор блюд</summary>
+    <div class="filter-panel">
+      <p id="result-count" aria-live="polite"></p>
+      <label for="time-filter">Общее время</label>
+      <select id="time-filter"><option value="">Любое</option><option value="15">До 15 минут</option><option value="30">До 30 минут</option></select>
+      <div class="nutrition-filters">
+        <label>Калории на порцию
+          <select id="kcal-filter"><option value="">Любые</option><option value="300">До 300 ккал</option><option value="500">До 500 ккал</option><option value="700">До 700 ккал</option></select>
+        </label>
+        <label>Белок на порцию
+          <select id="protein-filter"><option value="">Любое количество</option><option value="15">От 15 г</option><option value="25">От 25 г</option><option value="35">От 35 г</option></select>
+        </label>
+      </div>
+      <p id="nutrition-filter-note" class="filter-help" hidden>По калориям и белку показаны блюда с рассчитанным КБЖУ.</p>
+      <label class="filter-check"><input id="family-filter" type="checkbox"> Семейное меню</label>
+      <label class="filter-check"><input id="meatless-filter" type="checkbox"> Без мяса и рыбы</label>
+      <label class="filter-check"><input id="favorites-filter" type="checkbox"> Избранное</label>
+      <label for="products-filter">Продукты, через запятую</label>
+      <input id="products-filter" type="search" placeholder="Например, помидор, яйцо" maxlength="120">
+      <button id="filter-reset" type="button" class="secondary">Сбросить</button>
+    </div>
+  </details>
+  <a href="/articles/category/recipes/index.html">Рецепты в журнале</a>
+</div><p id="status" class="sr" role="status" aria-live="polite"></p></section>
+<footer class="foot"><a href="/#services" id="roulette-services">Консультации и меню</a></footer>
+</main><dialog id="recipe" aria-labelledby="recipeTitle"><div class="recipe-shell"><header class="recipe-header"><button id="close" class="close secondary" autofocus aria-label="Закрыть рецепт" type="button">×</button><p id="recipeBadge" class="eyebrow"></p><p class="cuisine" id="recipeCuisine" hidden></p><h2 id="recipeTitle"></h2><bdi id="recipeOriginalTitle" class="recipe-original-title" hidden></bdi><p id="recipeMeta"></p></header><div id="recipeScroll" class="recipe-scroll" tabindex="0"><div id="recipeBody"></div></div><footer class="recipe-footer"><button id="favorite" class="secondary" type="button" aria-pressed="false">В избранное</button><a id="source" class="secondary" hidden>В журнал →</a><button id="share" class="secondary" type="button">Поделиться</button><p id="shareStatus" role="status"></p></footer></div></dialog><template id="serving-template">
+  <div class="servings" role="group" aria-label="Количество порций">
+    <span>Порции</span>
+    <button id="portion-less" class="secondary" type="button" aria-label="Уменьшить количество порций">−</button>
+    <output id="portion-count" aria-live="polite"></output>
+    <button id="portion-more" class="secondary" type="button" aria-label="Увеличить количество порций">+</button>
+  </div>
+</template><noscript>Для рулетки включите JavaScript. <a href="/articles/index.html">Рецепты в журнале</a>.</noscript><script type="module" src="/roulette/app.mjs?v=14"></script></body></html>

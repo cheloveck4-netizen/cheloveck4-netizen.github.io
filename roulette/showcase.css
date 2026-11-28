@@ -1,0 +1,109 @@
+/* Owner-approved compact glossy entry, 27 November 2026. */
+#roulette-showcase { margin-block:clamp(16px,3vw,34px); }
+.roulette-mini-hook {
+  display:flex; align-items:center; justify-content:center; gap:clamp(6px,2vw,18px);
+  margin:0 0 10px; text-align:center; color:#78364d;
+  font:italic 600 clamp(15px,4.2vw,23px)/1.3 Georgia,serif;
+}
+.roulette-mini-hook::before,.roulette-mini-hook::after {
+  content:""; height:1px; background:#b98795; flex:1 1 20px; max-width:42px;
+}
+.roulette-mini,.roulette-journal-entry {
+  --olive:#294737;
+  color:#20382b; background:radial-gradient(ellipse at 82% 25%,#fffaf0,#eee8d5);
+  border:1px solid #d8cab0;
+}
+.roulette-mini {
+  display:grid; grid-template-columns:clamp(78px,25vw,114px) minmax(0,1fr) clamp(31px,10vw,48px);
+  align-items:center; gap:clamp(7px,2.1vw,18px); position:relative; isolation:isolate; overflow:hidden;
+  min-height:112px; box-sizing:border-box; padding:4px 0 4px 6px;
+  border:1px solid #b6a36a; border-radius:20px; text-decoration:none;
+  background:radial-gradient(ellipse at 72% 12%,#fffdf4,#f5edd9 72%,#eae3cb);
+  box-shadow:inset 0 0 0 1px #fff8e4,0 4px 14px #55452b15;
+}
+.roulette-mini:hover { border-color:#a88b4a; color:#20382b; }
+.roulette-mini:focus-visible { outline:2px solid #22382b; outline-offset:3px; }
+.roulette-mini-media {
+  display:block; position:relative; overflow:hidden; width:100%;
+  aspect-ratio:1; border-radius:13px; background:#e2dbc5;
+}
+.roulette-mini-media img {
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+}
+.roulette-mini-media img[hidden] { display:none; }
+.roulette-mini-label { min-width:0; display:grid; gap:3px; padding-block:1px; }
+.roulette-mini-meals {
+  display:flex; align-items:center; justify-content:center; gap:4px; width:fit-content;
+  max-width:100%; box-sizing:border-box; padding:2px 6px; border:1px solid #d6c48c;
+  border-radius:100px; color:#5f532c; background:#fff8e7;
+  font:600 clamp(10px,2.8vw,13px)/1.25 system-ui,sans-serif;
+}
+.roulette-mini-meals svg { width:14px; height:14px; flex:none; color:#a17b36; }
+.roulette-mini-label strong { font:700 clamp(20px,5.6vw,32px)/1.02 Georgia,serif; }
+.roulette-mini-label em { font:italic clamp(14px,4vw,20px)/1.16 Georgia,serif; }
+.roulette-mini-promise {
+  display:block; border-top:1px solid #dac68e; padding-top:4px;
+  font:500 clamp(11px,3vw,15px)/1.25 system-ui,sans-serif; color:#604539;
+}
+.roulette-mini-arrow {
+  align-self:stretch; min-height:44px; margin-block:-4px; display:grid; place-items:center;
+  border-radius:100% 19px 19px 100% / 50% 19px 19px 50%;
+  border-left:2px solid #d8bd76;
+  background:linear-gradient(145deg,#416346,#1d402c 75%); color:#fffaf0;
+  box-shadow:inset 1px 0 0 #fff7db;
+}
+.roulette-mini:hover .roulette-mini-arrow { background:#375541; }
+.roulette-mini-arrow svg { width:clamp(21px,6vw,27px); height:auto; }
+/* A curved band of reflected light, not a blinking banner. Composite only. */
+.roulette-mini::after {
+  content:""; position:absolute; z-index:3; pointer-events:none; inset:-20% -8%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 200' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0.8' y2='1'%3E%3Cstop stop-color='%23fff' stop-opacity='0'/%3E%3Cstop offset='.46' stop-color='%23fff8da' stop-opacity='.5'/%3E%3Cstop offset='.53' stop-color='%23fff' stop-opacity='.8'/%3E%3Cstop offset='1' stop-color='%23fff4d2' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M-50 150 C105 6 205 180 345 45 S535 40 650 -30 L650 34 C500 115 442 74 355 117 S105 91 -50 220Z'/%3E%3Cpath d='M-30 187 C115 43 215 210 350 82 S535 68 630 0' fill='none' stroke='%23fff' stroke-opacity='.56' stroke-width='2'/%3E%3C/svg%3E") center/100% 100% no-repeat;
+  opacity:0; transform:translateX(-115%);
+}
+.roulette-mini[data-motion="on"]::after { animation:roulette-gloss 8.5s ease-in-out infinite; }
+@keyframes roulette-gloss {
+  0%,8% { opacity:0; transform:translateX(-115%); }
+  13% { opacity:.48; }
+  29% { opacity:.48; }
+  35%,100% { opacity:0; transform:translateX(115%); }
+}
+.roulette-mini:focus-visible::after { animation:none; }
+@media (prefers-reduced-motion:reduce) { .roulette-mini::after { animation:none!important; } }
+@media (max-width:740px) {
+  #roulette-showcase.wrap { width:calc(100% - 24px); max-width:none; margin-inline:auto; padding-inline:0; }
+}
+@media (max-width:360px) {
+  .roulette-mini { grid-template-columns:74px minmax(0,1fr) 30px; gap:6px; padding-inline-start:5px; }
+  .roulette-mini-meals { gap:3px; padding-inline:4px; }
+  .roulette-mini-meals svg { display:none; }
+  .roulette-mini-label strong { font-size:20px; }
+}
+@media (min-width:741px) {
+  .roulette-mini { max-width:760px; margin-inline:auto; min-height:124px; }
+}
+.roulette-journal-entry { border-radius:24px; }
+.roulette-show-button {
+  border-radius:100px; background:var(--olive); color:#fffaf0; text-decoration:none; border:1px solid transparent;
+  display:inline-flex; align-items:center; justify-content:center; gap:12px; min-height:44px;
+  padding:.55em 1em; font-weight:700; line-height:1.25;
+}
+.roulette-show-button:hover { background:#345941; color:#fffaf0; }
+.roulette-show-button:focus-visible { outline:2px solid #22382b; outline-offset:3px; }
+.roulette-journal-entry { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px 18px; padding:14px 18px; margin:0 0 22px; }
+.roulette-journal-entry strong { font:700 1.3rem/1.2 Georgia,serif; }
+.roulette-journal-entry p { margin:2px 0 0; }
+@media (max-width:390px) {
+  .site-header .head-inner { gap:8px; }
+  .site-header .logo { flex-shrink:1; min-width:0; gap:8px; }
+  .site-header .logo-mark,.site-header .menu-toggle { flex:none; }
+  .site-header .logo-copy { min-width:0; }
+  .site-header .logo-copy small { letter-spacing:.05em; white-space:normal; }
+}
+@media (741px <= width <= 1060px) {
+  .site-header .nav:has(.roulette-nav-entry) { flex-wrap:wrap; gap:6px 14px; }
+}
+
+.roulette-photo-credits { margin:.45rem 0 0 .8rem; font-size:.8rem; color:#3a5545; }
+.roulette-photo-credits summary { cursor:pointer; width:fit-content; }
+.roulette-photo-credits ul { margin:.35rem 0; padding-inline-start:1.3rem; }
+.roulette-photo-credits a { color:inherit; text-decoration:underline; }
