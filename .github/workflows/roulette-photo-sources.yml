@@ -17,7 +17,7 @@ jobs:
           import hashlib, json, pathlib, urllib.parse, urllib.request, re, html, io, time
           from PIL import Image, ImageOps
           candidates = {
-            "u-seekh-kebab": ["Seekh kebab.jpg","Vivid mongoose", "CC0"],
+            "u-seekh-kebab": ["Beef shik kabar with onion & roti.jpg","Sm faysal", "CC BY-SA 4.0"],
             "u-masala-dosa": ["Masala Dosa 2023.jpg","Yakshitha","CC BY-SA 4.0"],
             "u-french-onion-soup": ["Soupe à l'oignon.jpg","Ludovic Péron","CC BY-SA 3.0"],
             "u-carimanola": ["Barranquilla - Carimañolas.jpg","Jdvillalobos","CC BY 3.0"],
@@ -47,9 +47,9 @@ jobs:
                   assert author.casefold() in actual.casefold(),(actual,author)
                   assert lic.casefold()==license.casefold() or (license=="CC0" and lic.startswith("CC0")),(lic,license)
                   link=meta["LicenseUrl"]["value"]
-                  assert link.startswith(("https://creativecommons.org/","http://creativecommons.org/"))
+                  assert link.startswith(("https://creativecommons.org/","http://creativecommons.org/")),(link,lic)
                   src=info.get("thumburl",info["url"])
-                  assert urllib.parse.urlsplit(src).hostname=="upload.wikimedia.org"
+                  assert urllib.parse.urlsplit(src).hostname=="upload.wikimedia.org",(src,info["url"])
                   raw=fetch(src)
                   im=ImageOps.exif_transpose(Image.open(io.BytesIO(raw))).convert("RGB")
                   im.thumbnail((720,720),Image.Resampling.LANCZOS)
